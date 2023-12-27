@@ -23,6 +23,9 @@
 		4E2AC7B02B3BB7A80000CF39 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A72B3BB7A80000CF39 /* Pretendard-Regular.otf */; };
 		4E2AC7B12B3BB7A80000CF39 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A82B3BB7A80000CF39 /* Pretendard-Medium.otf */; };
 		4E89900C2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */; };
+		4E8990132B3C686900B7FB5C /* Beverage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8990122B3C686900B7FB5C /* Beverage.storyboard */; };
+		4E8990152B3C687D00B7FB5C /* BeverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8990142B3C687D00B7FB5C /* BeverageViewController.swift */; };
+		4E8990172B3C689C00B7FB5C /* BeverageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8990162B3C689B00B7FB5C /* BeverageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		4E2AC7A72B3BB7A80000CF39 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		4E2AC7A82B3BB7A80000CF39 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E8990122B3C686900B7FB5C /* Beverage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beverage.storyboard; sourceTree = "<group>"; };
+		4E8990142B3C687D00B7FB5C /* BeverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageViewController.swift; sourceTree = "<group>"; };
+		4E8990162B3C689B00B7FB5C /* BeverageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +82,18 @@
 		4E2AC7892B3BAAEF0000CF39 /* KI5SK */ = {
 			isa = PBXGroup;
 			children = (
+				4E8990102B3C409000B7FB5C /* Model */,
+				4E89900F2B3C408A00B7FB5C /* Cart */,
 				4E89900A2B3BFABB00B7FB5C /* Burger */,
-				4E2AC79F2B3BB76B0000CF39 /* Fonts */,
+				4E89900D2B3C406900B7FB5C /* Beverage */,
+				4E89900E2B3C408000B7FB5C /* Dessert */,
+				4E8990112B3C410600B7FB5C /* Detail */,
 				4E2AC78A2B3BAAEF0000CF39 /* AppDelegate.swift */,
 				4E2AC78C2B3BAAEF0000CF39 /* SceneDelegate.swift */,
 				4E2AC7932B3BAAF00000CF39 /* Assets.xcassets */,
 				4E2AC7952B3BAAF00000CF39 /* LaunchScreen.storyboard */,
 				4E2AC7982B3BAAF00000CF39 /* Info.plist */,
+				4E2AC79F2B3BB76B0000CF39 /* Fonts */,
 			);
 			path = KI5SK;
 			sourceTree = "<group>";
@@ -111,6 +122,44 @@
 				4E2AC7902B3BAAEF0000CF39 /* Burger.storyboard */,
 			);
 			path = Burger;
+			sourceTree = "<group>";
+		};
+		4E89900D2B3C406900B7FB5C /* Beverage */ = {
+			isa = PBXGroup;
+			children = (
+				4E8990162B3C689B00B7FB5C /* BeverageCollectionViewCell.swift */,
+				4E8990142B3C687D00B7FB5C /* BeverageViewController.swift */,
+				4E8990122B3C686900B7FB5C /* Beverage.storyboard */,
+			);
+			path = Beverage;
+			sourceTree = "<group>";
+		};
+		4E89900E2B3C408000B7FB5C /* Dessert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dessert;
+			sourceTree = "<group>";
+		};
+		4E89900F2B3C408A00B7FB5C /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		4E8990102B3C409000B7FB5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E8990112B3C410600B7FB5C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +222,7 @@
 			files = (
 				4E2AC7972B3BAAF00000CF39 /* LaunchScreen.storyboard in Resources */,
 				4E2AC7A92B3BB7A80000CF39 /* Pretendard-Bold.otf in Resources */,
+				4E8990132B3C686900B7FB5C /* Beverage.storyboard in Resources */,
 				4E2AC7AD2B3BB7A80000CF39 /* Pretendard-ExtraBold.otf in Resources */,
 				4E2AC7AF2B3BB7A80000CF39 /* Pretendard-Light.otf in Resources */,
 				4E2AC7AC2B3BB7A80000CF39 /* Pretendard-SemiBold.otf in Resources */,
@@ -193,7 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8990172B3C689C00B7FB5C /* BeverageCollectionViewCell.swift in Sources */,
 				4E2AC78F2B3BAAEF0000CF39 /* BurgerViewController.swift in Sources */,
+				4E8990152B3C687D00B7FB5C /* BeverageViewController.swift in Sources */,
 				4E2AC78B2B3BAAEF0000CF39 /* AppDelegate.swift in Sources */,
 				4E2AC78D2B3BAAEF0000CF39 /* SceneDelegate.swift in Sources */,
 				4E89900C2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift in Sources */,

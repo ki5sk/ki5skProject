@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BeverageViewController.swift
 //  KI5SK
 //
 //  Created by woonKim on 2023/12/27.
@@ -7,44 +7,41 @@
 
 import UIKit
 
-class BurgerViewController: UIViewController {
+class BeverageViewController: UIViewController {
     
     @IBOutlet weak var hamburgerBtn: UIButton!
     @IBOutlet weak var beverageBtn: UIButton!
     @IBOutlet weak var dessertBtn: UIButton!
-    @IBOutlet weak var burgerCollectionView: UICollectionView!
+    @IBOutlet weak var beverageCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         hamburgerBtn.layer.cornerRadius = 16
-        hamburgerBtn.backgroundColor = .systemGray
-        
+        hamburgerBtn.layer.borderWidth = 1
+        hamburgerBtn.layer.borderColor = UIColor.systemGray.cgColor
+    
         beverageBtn.layer.cornerRadius = 16
-        beverageBtn.layer.borderWidth = 1
-        beverageBtn.layer.borderColor = UIColor.systemGray.cgColor
+        beverageBtn.backgroundColor = .systemGray
         
         dessertBtn.layer.cornerRadius = 16
         dessertBtn.layer.borderWidth = 1
         dessertBtn.layer.borderColor = UIColor.systemGray.cgColor
         
-        burgerCollectionView.delegate = self
-        burgerCollectionView.dataSource = self
-        burgerCollectionView.register(BurgerCollectionViewCell.self, forCellWithReuseIdentifier: BurgerCollectionViewCell.identifier)
-        burgerCollectionView.collectionViewLayout = createLayout()
+        beverageCollectionView.delegate = self
+        beverageCollectionView.dataSource = self
+        beverageCollectionView.register(BeverageCollectionViewCell.self, forCellWithReuseIdentifier: BeverageCollectionViewCell.identifier)
+        beverageCollectionView.collectionViewLayout = createLayout()
     }
     
-    @IBAction func beverageMenuBtn(_ sender: Any) {
-       
-        let storyboard = UIStoryboard(name: "Beverage", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "BeverageViewController") as UIViewController
+    @IBAction func hamburgerMenuBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Burger", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BurgerViewController") as UIViewController
         
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: false, completion: nil)
     }
     
-    @IBAction func dessertMenuBtn(_ sender: Any) {
-    }
     
     func createLayout() -> UICollectionViewCompositionalLayout {
         
@@ -67,11 +64,11 @@ class BurgerViewController: UIViewController {
     }
 }
 
-extension BurgerViewController: UICollectionViewDelegate {
+extension BeverageViewController: UICollectionViewDelegate {
 
 }
 
-extension BurgerViewController: UICollectionViewDataSource {
+extension BeverageViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -79,7 +76,7 @@ extension BurgerViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BurgerCollectionViewCell.identifier, for: indexPath) as! BurgerCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BeverageCollectionViewCell.identifier, for: indexPath) as! BeverageCollectionViewCell
         
         // 셀 색상
         cell.backgroundColor = .systemGreen
@@ -88,6 +85,3 @@ extension BurgerViewController: UICollectionViewDataSource {
         return cell
     }
 }
-
-
-
