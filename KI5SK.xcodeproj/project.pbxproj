@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E2AC78B2B3BAAEF0000CF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AC78A2B3BAAEF0000CF39 /* AppDelegate.swift */; };
 		4E2AC78D2B3BAAEF0000CF39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AC78C2B3BAAEF0000CF39 /* SceneDelegate.swift */; };
-		4E2AC78F2B3BAAEF0000CF39 /* BurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AC78E2B3BAAEF0000CF39 /* BurgerViewController.swift */; };
+		4E2AC78F2B3BAAEF0000CF39 /* BurgerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AC78E2B3BAAEF0000CF39 /* BurgerVC.swift */; };
 		4E2AC7922B3BAAEF0000CF39 /* Burger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7902B3BAAEF0000CF39 /* Burger.storyboard */; };
 		4E2AC7942B3BAAF00000CF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7932B3BAAF00000CF39 /* Assets.xcassets */; };
 		4E2AC7972B3BAAF00000CF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7952B3BAAF00000CF39 /* LaunchScreen.storyboard */; };
@@ -22,17 +22,20 @@
 		4E2AC7AF2B3BB7A80000CF39 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A62B3BB7A80000CF39 /* Pretendard-Light.otf */; };
 		4E2AC7B02B3BB7A80000CF39 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A72B3BB7A80000CF39 /* Pretendard-Regular.otf */; };
 		4E2AC7B12B3BB7A80000CF39 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A82B3BB7A80000CF39 /* Pretendard-Medium.otf */; };
-		4E89900C2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */; };
+		4E89900C2B3C0A9E00B7FB5C /* BurgerCvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89900B2B3C0A9E00B7FB5C /* BurgerCvCell.swift */; };
 		4E8990132B3C686900B7FB5C /* Beverage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8990122B3C686900B7FB5C /* Beverage.storyboard */; };
-		4E8990152B3C687D00B7FB5C /* BeverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8990142B3C687D00B7FB5C /* BeverageViewController.swift */; };
-		4E8990172B3C689C00B7FB5C /* BeverageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8990162B3C689B00B7FB5C /* BeverageCollectionViewCell.swift */; };
+		4E8990152B3C687D00B7FB5C /* BeverageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8990142B3C687D00B7FB5C /* BeverageVC.swift */; };
+		4E8990172B3C689C00B7FB5C /* BeverageCvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8990162B3C689B00B7FB5C /* BeverageCvCell.swift */; };
+		4E8990192B3C8A2A00B7FB5C /* Dessert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8990182B3C8A2A00B7FB5C /* Dessert.storyboard */; };
+		4E89901B2B3C8A6A00B7FB5C /* DessertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89901A2B3C8A6A00B7FB5C /* DessertVC.swift */; };
+		4E89901D2B3C8A8200B7FB5C /* DessertCvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89901C2B3C8A8200B7FB5C /* DessertCvCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E2AC7872B3BAAEF0000CF39 /* KI5SK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KI5SK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2AC78A2B3BAAEF0000CF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E2AC78C2B3BAAEF0000CF39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E2AC78E2B3BAAEF0000CF39 /* BurgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerViewController.swift; sourceTree = "<group>"; };
+		4E2AC78E2B3BAAEF0000CF39 /* BurgerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerVC.swift; sourceTree = "<group>"; };
 		4E2AC7912B3BAAEF0000CF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Burger.storyboard; sourceTree = "<group>"; };
 		4E2AC7932B3BAAF00000CF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E2AC7962B3BAAF00000CF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,10 +49,13 @@
 		4E2AC7A62B3BB7A80000CF39 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		4E2AC7A72B3BB7A80000CF39 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		4E2AC7A82B3BB7A80000CF39 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
-		4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E89900B2B3C0A9E00B7FB5C /* BurgerCvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCvCell.swift; sourceTree = "<group>"; };
 		4E8990122B3C686900B7FB5C /* Beverage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beverage.storyboard; sourceTree = "<group>"; };
-		4E8990142B3C687D00B7FB5C /* BeverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageViewController.swift; sourceTree = "<group>"; };
-		4E8990162B3C689B00B7FB5C /* BeverageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E8990142B3C687D00B7FB5C /* BeverageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageVC.swift; sourceTree = "<group>"; };
+		4E8990162B3C689B00B7FB5C /* BeverageCvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCvCell.swift; sourceTree = "<group>"; };
+		4E8990182B3C8A2A00B7FB5C /* Dessert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dessert.storyboard; sourceTree = "<group>"; };
+		4E89901A2B3C8A6A00B7FB5C /* DessertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertVC.swift; sourceTree = "<group>"; };
+		4E89901C2B3C8A8200B7FB5C /* DessertCvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertCvCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +123,8 @@
 		4E89900A2B3BFABB00B7FB5C /* Burger */ = {
 			isa = PBXGroup;
 			children = (
-				4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */,
-				4E2AC78E2B3BAAEF0000CF39 /* BurgerViewController.swift */,
+				4E89900B2B3C0A9E00B7FB5C /* BurgerCvCell.swift */,
+				4E2AC78E2B3BAAEF0000CF39 /* BurgerVC.swift */,
 				4E2AC7902B3BAAEF0000CF39 /* Burger.storyboard */,
 			);
 			path = Burger;
@@ -127,8 +133,8 @@
 		4E89900D2B3C406900B7FB5C /* Beverage */ = {
 			isa = PBXGroup;
 			children = (
-				4E8990162B3C689B00B7FB5C /* BeverageCollectionViewCell.swift */,
-				4E8990142B3C687D00B7FB5C /* BeverageViewController.swift */,
+				4E8990162B3C689B00B7FB5C /* BeverageCvCell.swift */,
+				4E8990142B3C687D00B7FB5C /* BeverageVC.swift */,
 				4E8990122B3C686900B7FB5C /* Beverage.storyboard */,
 			);
 			path = Beverage;
@@ -137,6 +143,9 @@
 		4E89900E2B3C408000B7FB5C /* Dessert */ = {
 			isa = PBXGroup;
 			children = (
+				4E89901C2B3C8A8200B7FB5C /* DessertCvCell.swift */,
+				4E89901A2B3C8A6A00B7FB5C /* DessertVC.swift */,
+				4E8990182B3C8A2A00B7FB5C /* Dessert.storyboard */,
 			);
 			path = Dessert;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 				4E2AC7AE2B3BB7A80000CF39 /* Pretendard-Black.otf in Resources */,
 				4E2AC7AA2B3BB7A80000CF39 /* Pretendard-ExtraLight.otf in Resources */,
 				4E2AC7AB2B3BB7A80000CF39 /* Pretendard-Thin.otf in Resources */,
+				4E8990192B3C8A2A00B7FB5C /* Dessert.storyboard in Resources */,
 				4E2AC7B02B3BB7A80000CF39 /* Pretendard-Regular.otf in Resources */,
 				4E2AC7942B3BAAF00000CF39 /* Assets.xcassets in Resources */,
 				4E2AC7922B3BAAEF0000CF39 /* Burger.storyboard in Resources */,
@@ -243,12 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E8990172B3C689C00B7FB5C /* BeverageCollectionViewCell.swift in Sources */,
-				4E2AC78F2B3BAAEF0000CF39 /* BurgerViewController.swift in Sources */,
-				4E8990152B3C687D00B7FB5C /* BeverageViewController.swift in Sources */,
+				4E8990172B3C689C00B7FB5C /* BeverageCvCell.swift in Sources */,
+				4E2AC78F2B3BAAEF0000CF39 /* BurgerVC.swift in Sources */,
+				4E8990152B3C687D00B7FB5C /* BeverageVC.swift in Sources */,
+				4E89901D2B3C8A8200B7FB5C /* DessertCvCell.swift in Sources */,
 				4E2AC78B2B3BAAEF0000CF39 /* AppDelegate.swift in Sources */,
+				4E89901B2B3C8A6A00B7FB5C /* DessertVC.swift in Sources */,
 				4E2AC78D2B3BAAEF0000CF39 /* SceneDelegate.swift in Sources */,
-				4E89900C2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift in Sources */,
+				4E89900C2B3C0A9E00B7FB5C /* BurgerCvCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

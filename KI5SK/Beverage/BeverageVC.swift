@@ -35,6 +35,7 @@ class BeverageViewController: UIViewController {
     }
     
     @IBAction func hamburgerMenuBtn(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
         let storyboard = UIStoryboard(name: "Burger", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BurgerViewController") as UIViewController
         
