@@ -32,12 +32,37 @@ class BurgerViewController: UIViewController {
         dessertBtn.layer.borderWidth = 1
         dessertBtn.layer.borderColor = UIColor.systemGray.cgColor
         
+        burgerCollectionView.delegate = self
+        burgerCollectionView.dataSource = self
+        burgerCollectionView.register(BurgerCollectionViewCell.self, forCellWithReuseIdentifier: BurgerCollectionViewCell.identifier)
+        burgerCollectionView.collectionViewLayout = createLayout()
+        
         // 직원호출 탭 제스쳐 추가
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(callStaffTap(sender:)))
         callStaff.addGestureRecognizer(tapGesture)
         
         orderBtn.layer.cornerRadius = 8
         orderBtn.titleLabel?.textColor = .white
+    }
+    
+    func createLayout() -> UICollectionViewCompositionalLayout {
+        
+        // item
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.85)))
+        
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 6, trailing: 11.5)
+        
+        // Group
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(500), heightDimension: .fractionalHeight(1)), subitem: item, count: 2)
+        
+        // Section
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 7)
+        
+        // return
+        return UICollectionViewCompositionalLayout(section: section)
     }
 
     // 직원호출 액션
@@ -61,10 +86,11 @@ extension BurgerViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BurgerCollectionViewCell.identifier, for: indexPath) as! BurgerCollectionViewCell
+        
+        return cell
     }
-    
-    
 }
 
 

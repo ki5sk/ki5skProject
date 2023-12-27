@@ -22,6 +22,7 @@
 		4E2AC7AF2B3BB7A80000CF39 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A62B3BB7A80000CF39 /* Pretendard-Light.otf */; };
 		4E2AC7B02B3BB7A80000CF39 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A72B3BB7A80000CF39 /* Pretendard-Regular.otf */; };
 		4E2AC7B12B3BB7A80000CF39 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AC7A82B3BB7A80000CF39 /* Pretendard-Medium.otf */; };
+		4E89900C2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4E2AC7A62B3BB7A80000CF39 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		4E2AC7A72B3BB7A80000CF39 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		4E2AC7A82B3BB7A80000CF39 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		4E89900A2B3BFABB00B7FB5C /* Burger */ = {
 			isa = PBXGroup;
 			children = (
+				4E89900B2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift */,
 				4E2AC78E2B3BAAEF0000CF39 /* BurgerViewController.swift */,
 				4E2AC7902B3BAAEF0000CF39 /* Burger.storyboard */,
 			);
@@ -193,6 +196,7 @@
 				4E2AC78F2B3BAAEF0000CF39 /* BurgerViewController.swift in Sources */,
 				4E2AC78B2B3BAAEF0000CF39 /* AppDelegate.swift in Sources */,
 				4E2AC78D2B3BAAEF0000CF39 /* SceneDelegate.swift in Sources */,
+				4E89900C2B3C0A9E00B7FB5C /* BurgerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
