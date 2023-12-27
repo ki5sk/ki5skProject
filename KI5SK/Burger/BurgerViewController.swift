@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BurgerViewController: UIViewController {
     
     @IBOutlet weak var hamburgerBtn: UIButton!
     @IBOutlet weak var beverageBtn: UIButton!
     @IBOutlet weak var dessertBtn: UIButton!
-    
+    @IBOutlet weak var burgerCollectionView: UICollectionView!
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var orderBtn: UIButton!
+    @IBOutlet weak var callStaff: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +32,40 @@ class ViewController: UIViewController {
         dessertBtn.layer.borderWidth = 1
         dessertBtn.layer.borderColor = UIColor.systemGray.cgColor
         
+        // 직원호출 탭 제스쳐 추가
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(callStaffTap(sender:)))
+        callStaff.addGestureRecognizer(tapGesture)
+        
         orderBtn.layer.cornerRadius = 8
         orderBtn.titleLabel?.textColor = .white
     }
 
-    
-    
+    // 직원호출 액션
+    @objc func callStaffTap(sender: UITapGestureRecognizer) {
+            
+    }
+
+    // 주문 버튼 액션
     @IBAction func orderBtn(_ sender: Any) {
-        
         
     }
 }
+
+extension BurgerViewController: UICollectionViewDelegate {
+    
+}
+
+extension BurgerViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+}
+
+
 
