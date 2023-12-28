@@ -35,6 +35,7 @@
 		4EA7C6B42B3D139F00357FE0 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA7C6B32B3D139F00357FE0 /* Cart.storyboard */; };
 		4EA7C6B62B3D13B100357FE0 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA7C6B52B3D13B100357FE0 /* CartVC.swift */; };
 		4EA7C6B82B3D2A3700357FE0 /* CompletePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA7C6B72B3D2A3700357FE0 /* CompletePaymentVC.swift */; };
+		E06566DA2B3D3E8000CF1567 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06566D92B3D3E8000CF1567 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		4EA7C6B32B3D139F00357FE0 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		4EA7C6B52B3D13B100357FE0 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		4EA7C6B72B3D2A3700357FE0 /* CompletePaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletePaymentVC.swift; sourceTree = "<group>"; };
+		E06566D92B3D3E8000CF1567 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA7C6B12B3D137200357FE0 /* Model.swift */,
+				E06566D92B3D3E8000CF1567 /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				4EA7C6B22B3D137200357FE0 /* Model.swift in Sources */,
 				4E2AC78B2B3BAAEF0000CF39 /* AppDelegate.swift in Sources */,
 				4EA7C6B62B3D13B100357FE0 /* CartVC.swift in Sources */,
+				E06566DA2B3D3E8000CF1567 /* Menu.swift in Sources */,
 				4E89901B2B3C8A6A00B7FB5C /* DessertVC.swift in Sources */,
 				4E2AC78D2B3BAAEF0000CF39 /* SceneDelegate.swift in Sources */,
 				4E89900C2B3C0A9E00B7FB5C /* BurgerCvCell.swift in Sources */,
