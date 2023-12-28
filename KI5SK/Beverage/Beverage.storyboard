@@ -26,8 +26,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spw-td-oXI">
                                 <rect key="frame" x="0.0" y="59" width="393" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KI5SK BUGER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tz-Z8-rrL">
-                                        <rect key="frame" x="99.000000000000014" y="17" width="195.33333333333337" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KI5SK BURGER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tz-Z8-rrL">
+                                        <rect key="frame" x="84.666666666666686" y="23" width="224" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="S5L-KG-qBU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="31"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -60,6 +63,9 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="디저트"/>
+                                                        <connections>
+                                                            <action selector="dessertMenuBtn:" destination="Y7f-zf-MSx" eventType="touchUpInside" id="Mw6-hm-JVr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -78,12 +84,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="nwT-Kk-leL" firstAttribute="top" secondItem="4Tz-Z8-rrL" secondAttribute="bottom" constant="8" id="B4u-Sh-2N9"/>
                                     <constraint firstAttribute="trailing" secondItem="nwT-Kk-leL" secondAttribute="trailing" id="CyK-hO-xG9"/>
-                                    <constraint firstItem="nwT-Kk-leL" firstAttribute="top" secondItem="4Tz-Z8-rrL" secondAttribute="bottom" constant="8" id="OmU-ov-uJZ"/>
-                                    <constraint firstItem="4Tz-Z8-rrL" firstAttribute="centerX" secondItem="spw-td-oXI" secondAttribute="centerX" id="Pg8-9B-iDF"/>
                                     <constraint firstAttribute="height" constant="110" id="Qad-2R-TUU"/>
                                     <constraint firstItem="nwT-Kk-leL" firstAttribute="leading" secondItem="spw-td-oXI" secondAttribute="leading" id="Sh8-Q2-VJw"/>
                                     <constraint firstAttribute="bottom" secondItem="nwT-Kk-leL" secondAttribute="bottom" id="UG1-sx-2Cy"/>
+                                    <constraint firstItem="4Tz-Z8-rrL" firstAttribute="centerX" secondItem="spw-td-oXI" secondAttribute="centerX" id="eIm-2a-f4b"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkX-nr-Nxj">
@@ -93,14 +99,7 @@
                                     <constraint firstAttribute="height" constant="200" id="K6O-UD-St9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAi-Rh-AxF">
-                                <rect key="frame" x="0.0" y="617" width="393" height="1"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="Gg4-LB-meo"/>
-                                </constraints>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IGY-Rh-365">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IGY-Rh-365">
                                 <rect key="frame" x="0.0" y="169" width="393" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ylt-7q-sNI">
@@ -122,6 +121,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAi-Rh-AxF">
+                                <rect key="frame" x="0.0" y="617" width="393" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Gg4-LB-meo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fEx-yE-Zxd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -141,7 +147,6 @@
                             <constraint firstItem="fEx-yE-Zxd" firstAttribute="bottom" secondItem="WkX-nr-Nxj" secondAttribute="bottom" id="zfE-t3-mzF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="s0b-O9-6FS"/>
                     <connections>
                         <outlet property="beverageBtn" destination="l3w-rn-qpX" id="HtK-S0-dwe"/>
                         <outlet property="beverageCollectionView" destination="IGY-Rh-365" id="iS0-oR-8kN"/>

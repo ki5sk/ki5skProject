@@ -2,7 +2,7 @@
 //  BeverageCollectionViewCell.swift
 //  KI5SK
 //
-//  Created by woonKim on 2023/12/27.
+//  Created by TeamSpaFiveTeam on 2023/12/27.
 //
 
 import UIKit

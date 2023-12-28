@@ -2,7 +2,7 @@
 //  DessertCollectionViewCell.swift
 //  KI5SK
 //
-//  Created by woonKim on 2023/12/28.
+//  Created by TeamSpaFiveTeam on 2023/12/28.
 //
 
 import UIKit

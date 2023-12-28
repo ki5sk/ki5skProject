@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  KI5SK
 //
-//  Created by woonKim on 2023/12/27.
+//  Created by TeamSpaFiveTeam on 2023/12/27.
 //
 
 import UIKit
@@ -44,8 +44,15 @@ class BurgerViewController: UIViewController {
     }
     
     @IBAction func dessertMenuBtn(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Dessert", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DessertViewController") as UIViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
     }
     
+    // 컬렉션뷰 셀 레이아웃
     func createLayout() -> UICollectionViewCompositionalLayout {
         
         // item
@@ -56,19 +63,25 @@ class BurgerViewController: UIViewController {
         // Group
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.4)), subitem: item, count: 2)
 
-        
         // Section
         let section = NSCollectionLayoutSection(group: group)
         
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 8, bottom: 8, trailing: 8)
         
-        // return
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
 
 extension BurgerViewController: UICollectionViewDelegate {
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // 메뉴 옵션 모달 띄우기
+        let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as UIViewController
+        
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension BurgerViewController: UICollectionViewDataSource {
@@ -88,6 +101,3 @@ extension BurgerViewController: UICollectionViewDataSource {
         return cell
     }
 }
-
-
-

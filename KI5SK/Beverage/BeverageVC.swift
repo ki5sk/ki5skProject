@@ -2,7 +2,7 @@
 //  BeverageViewController.swift
 //  KI5SK
 //
-//  Created by woonKim on 2023/12/27.
+//  Created by TeamSpaFiveTeam on 2023/12/27.
 //
 
 import UIKit
@@ -35,7 +35,7 @@ class BeverageViewController: UIViewController {
     }
     
     @IBAction func hamburgerMenuBtn(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        
         let storyboard = UIStoryboard(name: "Burger", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BurgerViewController") as UIViewController
         
@@ -43,7 +43,16 @@ class BeverageViewController: UIViewController {
         present(vc, animated: false, completion: nil)
     }
     
+    @IBAction func dessertMenuBtn(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Dessert", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DessertViewController") as UIViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
+    }
     
+    // 컬렉션뷰 셀 레이아웃
     func createLayout() -> UICollectionViewCompositionalLayout {
         
         // item
@@ -60,13 +69,20 @@ class BeverageViewController: UIViewController {
         
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 8, bottom: 8, trailing: 8)
         
-        // return
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
 
 extension BeverageViewController: UICollectionViewDelegate {
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // 메뉴 옵션 모달 띄우기
+        let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as UIViewController
+        
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension BeverageViewController: UICollectionViewDataSource {
