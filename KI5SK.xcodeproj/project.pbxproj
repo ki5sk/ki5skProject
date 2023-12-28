@@ -102,7 +102,7 @@
 		4E2AC7892B3BAAEF0000CF39 /* KI5SK */ = {
 			isa = PBXGroup;
 			children = (
-				4E8990102B3C409000B7FB5C /* Model */,
+				4E8990102B3C409000B7FB5C /* Models */,
 				4E89900F2B3C408A00B7FB5C /* Cart */,
 				4E89900A2B3BFABB00B7FB5C /* Burger */,
 				4E89900D2B3C406900B7FB5C /* Beverage */,
@@ -174,13 +174,13 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
-		4E8990102B3C409000B7FB5C /* Model */ = {
+		4E8990102B3C409000B7FB5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4EA7C6B12B3D137200357FE0 /* Model.swift */,
 				E06566D92B3D3E8000CF1567 /* Menu.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4E8990112B3C410600B7FB5C /* DetailOption */ = {
