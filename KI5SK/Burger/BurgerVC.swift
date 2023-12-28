@@ -101,8 +101,8 @@ extension BurgerViewController: UICollectionViewDataSource {
         //버거 메뉴 사진
 //        cell.BugerMenuImageView.image = UIImage(named: cell.bugerMenu[indexPath.row].photo)
         
-//        //버거 메뉴 이름
-//        cell.BugerMenuNameLable.text = cell.bugerMenu[indexPath.row].name
+        //버거 메뉴 이름
+        cell.BugerMenuNameLable.text = cell.bugerMenu[indexPath.row].name
         
 //        //버거 메뉴 가격
 //        cell.BugerMenuPriceLable.text = "\(cell.bugerMenu[indexPath.row].price)"
