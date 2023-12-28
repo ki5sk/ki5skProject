@@ -86,16 +86,29 @@ extension BurgerViewController: UICollectionViewDelegate {
 
 extension BurgerViewController: UICollectionViewDataSource {
 
+    //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        
+        BurgerCollectionViewCell().setup()
+        return BurgerCollectionViewCell().bugerMenu.count
     }
     
+    //cell 내부 구현부
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BurgerCollectionViewCell.identifier, for: indexPath) as! BurgerCollectionViewCell
         
+        //버거 메뉴 사진
+//        cell.BugerMenuImageView.image = UIImage(named: cell.bugerMenu[indexPath.row].photo)
+        
+//        //버거 메뉴 이름
+//        cell.BugerMenuNameLable.text = cell.bugerMenu[indexPath.row].name
+        
+//        //버거 메뉴 가격
+//        cell.BugerMenuPriceLable.text = "\(cell.bugerMenu[indexPath.row].price)"
+        
         // 셀 색상
-        cell.backgroundColor = .systemGreen
+        cell.backgroundColor = .systemGray6
         cell.layer.cornerRadius = 16
         
         return cell
