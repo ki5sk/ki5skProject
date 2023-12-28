@@ -105,7 +105,7 @@
 				4E89900A2B3BFABB00B7FB5C /* Burger */,
 				4E89900D2B3C406900B7FB5C /* Beverage */,
 				4E89900E2B3C408000B7FB5C /* Dessert */,
-				4E8990112B3C410600B7FB5C /* Detail */,
+				4E8990112B3C410600B7FB5C /* DetailOption */,
 				4E2AC78A2B3BAAEF0000CF39 /* AppDelegate.swift */,
 				4E2AC78C2B3BAAEF0000CF39 /* SceneDelegate.swift */,
 				4E2AC7932B3BAAF00000CF39 /* Assets.xcassets */,
@@ -180,13 +180,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4E8990112B3C410600B7FB5C /* Detail */ = {
+		4E8990112B3C410600B7FB5C /* DetailOption */ = {
 			isa = PBXGroup;
 			children = (
 				4EA7C6AF2B3D133700357FE0 /* DetailOptionVC.swift */,
 				4EA7C6AD2B3D12FC00357FE0 /* DetailOption.storyboard */,
 			);
-			path = Detail;
+			path = DetailOption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
