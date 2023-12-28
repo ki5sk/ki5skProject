@@ -165,9 +165,9 @@
 		4E89900F2B3C408A00B7FB5C /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				4EA7C6B32B3D139F00357FE0 /* Cart.storyboard */,
-				4EA7C6B52B3D13B100357FE0 /* CartVC.swift */,
 				4EA7C6B72B3D2A3700357FE0 /* CompletePaymentVC.swift */,
+				4EA7C6B52B3D13B100357FE0 /* CartVC.swift */,
+				4EA7C6B32B3D139F00357FE0 /* Cart.storyboard */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -183,8 +183,8 @@
 		4E8990112B3C410600B7FB5C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				4EA7C6AD2B3D12FC00357FE0 /* DetailOption.storyboard */,
 				4EA7C6AF2B3D133700357FE0 /* DetailOptionVC.swift */,
+				4EA7C6AD2B3D12FC00357FE0 /* DetailOption.storyboard */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
