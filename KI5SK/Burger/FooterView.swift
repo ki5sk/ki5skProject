@@ -8,31 +8,27 @@
 import UIKit
 
 class FooterView: UIView {
+    let burgerVC: BurgerViewController
+    
     @IBOutlet var totalCost: UILabel!
     @IBOutlet var tableView: UITableView!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
         
-//        tableView.dataSource = self
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        
+        tableView.dataSource = self
     }
 }
 
-//extension FooterView: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return data?.count ?? 0
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//    }
-//}
+extension FooterView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return burgerVC.carts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
 
 extension FooterView {
     @IBAction func orderButton(_ sender: UIButton) {
