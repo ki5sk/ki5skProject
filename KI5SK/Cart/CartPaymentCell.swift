@@ -8,6 +8,8 @@
 import UIKit
 
 class CartPaymentCell: UITableViewCell {
+    var menu: Menu?
+    
     @IBOutlet weak var imageTitle: UIImageView!
     @IBOutlet weak var menuTitle: UILabel!
     @IBOutlet weak var optionsTitle: UILabel!
@@ -23,6 +25,8 @@ class CartPaymentCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        menuTitle.text = menu?.name
+        
     }
 
 }
