@@ -52,7 +52,26 @@ class DetailOptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //메뉴 인스턴스 생성
+        var selectedMenu = MenuData()
+        selectedMenu.setMenu()
+        var menu: [Menu] = []
+        
+        //선택 카테고리 식별
+        switch selectedCategory {
+        case .burger : menu = selectedMenu.bugerMenu
+        case .beverage : menu = selectedMenu.beverageMenu
+        case .side : menu = selectedMenu.dessertMenu
+        }
+        
+        //메뉴 이미지, 이름, 가격
+        menuImage.image = UIImage(named: menu[selectedIndexPath].name)
+        menuNameLbl.text = menu[selectedIndexPath].name
+        menuPriceLbl.text = "\(menu[selectedIndexPath].price)원"
+        
+        //싱글 옵션
+        topOptionLbl.text = menu[selectedIndexPath].singleOption?[0].title
 
 //        singleOption1Btn.backgroundImage(for: UIImage(systemName: "checkmark.circle.fill"))
         

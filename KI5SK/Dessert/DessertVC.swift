@@ -79,6 +79,11 @@ extension DessertViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        //선택 indexPath 넘겨주기
+        //선택 Category 넘겨주기
+        selectedIndexPath = indexPath.row
+        selectedCategory = .side
+        
         // 메뉴 옵션 모달 띄우기
         let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as UIViewController
