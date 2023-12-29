@@ -7,5 +7,7 @@
 
 import Foundation
 
+var myCart: [Menu] = []
+
 struct Model {
 }

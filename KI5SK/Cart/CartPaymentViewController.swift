@@ -2,7 +2,6 @@
 import UIKit
 
 class CartPaymentViewController: UIViewController {
-    var carts: [Menu] = Menu.testData()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +19,7 @@ class CartPaymentViewController: UIViewController {
 
 extension CartPaymentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carts.count
+        return myCart.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

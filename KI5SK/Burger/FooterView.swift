@@ -22,7 +22,7 @@ class FooterView: UIView {
 
 extension FooterView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return burgerVC.carts.count
+        return myCart.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

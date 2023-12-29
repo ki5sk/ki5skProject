@@ -16,32 +16,6 @@ class DessertCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var DessertMenuNameLable: UILabel!
     @IBOutlet weak var DessertMenuPriceLable: UILabel!
     
-    //MARK: 디저트 메뉴 생성
-    var dessertMenu: [Menu] = []
-    
-    var pie = Menu(
-        name: "PIE",
-        photo: "PIE",
-        price: 2000,
-        category: .side
-    )
-    var cookie = Menu(
-        name: "COOKIE",
-        photo: "COOKIE",
-        price: 2500,
-        category: .side
-    )
-    var icecream = Menu(
-        name: "ICECREAM",
-        photo: "ICECREAM",
-        price: 1500,
-        category: .side
-    )
-    
-    func setup() {
-        dessertMenu = [pie, cookie, icecream]
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
