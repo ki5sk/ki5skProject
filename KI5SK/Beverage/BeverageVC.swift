@@ -30,7 +30,6 @@ class BeverageViewController: UIViewController {
         
         beverageCollectionView.delegate = self
         beverageCollectionView.dataSource = self
-        beverageCollectionView.register(BeverageCollectionViewCell.self, forCellWithReuseIdentifier: BeverageCollectionViewCell.identifier)
         beverageCollectionView.collectionViewLayout = createLayout()
     }
     
@@ -61,7 +60,7 @@ class BeverageViewController: UIViewController {
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8)
         
         // Group
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.4)), subitem: item, count: 2)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5)), subitem: item, count: 2)
 
         
         // Section
@@ -87,16 +86,30 @@ extension BeverageViewController: UICollectionViewDelegate {
 
 extension BeverageViewController: UICollectionViewDataSource {
 
+    //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        let beverage = BeverageCollectionViewCell()
+        beverage.setup()
+        return beverage.beverageMenu.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BeverageCollectionViewCell.identifier, for: indexPath) as! BeverageCollectionViewCell
         
+        cell.setup()
+        
+        //음료 메뉴 사진
+        cell.BeverageMenuImageView.image = UIImage(named: cell.beverageMenu[indexPath.row].photo)
+
+        //음료 메뉴 이름
+        cell.BeverageMenuNameLable.text = cell.beverageMenu[indexPath.row].name
+
+        //음료 메뉴 가격
+        cell.BeverageMenuPriceLable.text = "\(cell.beverageMenu[indexPath.row].price)원"
+        
         // 셀 색상
-        cell.backgroundColor = .systemGreen
+        cell.backgroundColor = .systemGray6
         cell.layer.cornerRadius = 16
         
         return cell
