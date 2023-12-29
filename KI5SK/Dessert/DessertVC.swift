@@ -30,7 +30,6 @@ class DessertViewController: UIViewController {
 
         dessertCollectionView.delegate = self
         dessertCollectionView.dataSource = self
-        dessertCollectionView.register(DessertCollectionViewCell.self, forCellWithReuseIdentifier: DessertCollectionViewCell.identifier)
         dessertCollectionView.collectionViewLayout = createLayout()
     }
     
@@ -61,7 +60,7 @@ class DessertViewController: UIViewController {
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8)
         
         // Group
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.4)), subitem: item, count: 2)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5)), subitem: item, count: 2)
 
         
         // Section
@@ -87,16 +86,30 @@ extension DessertViewController: UICollectionViewDelegate {
 
 extension DessertViewController: UICollectionViewDataSource {
 
+    //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        let dessert = DessertCollectionViewCell()
+        dessert.setup()
+        return dessert.dessertMenu.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DessertCollectionViewCell.identifier, for: indexPath) as! DessertCollectionViewCell
         
+        cell.setup()
+        
+        //디저트 메뉴 사진
+        cell.DessertMenuImageView.image = UIImage(named: cell.dessertMenu[indexPath.row].photo)
+
+        //디저트 메뉴 이름
+        cell.DessertMenuNameLable.text = cell.dessertMenu[indexPath.row].name
+
+        //디저트 메뉴 가격
+        cell.DessertMenuPriceLable.text = "\(cell.dessertMenu[indexPath.row].price)원"
+        
         // 셀 색상
-        cell.backgroundColor = .systemGreen
+        cell.backgroundColor = .systemGray6
         cell.layer.cornerRadius = 16
         
         return cell

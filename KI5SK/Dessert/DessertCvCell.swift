@@ -11,11 +11,38 @@ class DessertCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "cell"
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    //MARK: cell 컴포넌트 Outlet 선언
+    @IBOutlet weak var DessertMenuImageView: UIImageView!
+    @IBOutlet weak var DessertMenuNameLable: UILabel!
+    @IBOutlet weak var DessertMenuPriceLable: UILabel!
+    
+    //MARK: 디저트 메뉴 생성
+    var dessertMenu: [Menu] = []
+    
+    var pie = Menu(
+        name: "PIE",
+        photo: "PIE",
+        price: 2000,
+        category: .side
+    )
+    var cookie = Menu(
+        name: "COOKIE",
+        photo: "COOKIE",
+        price: 2500,
+        category: .side
+    )
+    var icecream = Menu(
+        name: "ICECREAM",
+        photo: "ICECREAM",
+        price: 1500,
+        category: .side
+    )
+    
+    func setup() {
+        dessertMenu = [pie, cookie, icecream]
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
 }
