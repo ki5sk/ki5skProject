@@ -9,6 +9,9 @@ import UIKit
 
 class BeverageViewController: UIViewController {
     
+    //메뉴 데이터 인스턴스
+    var beverageData = MenuData()
+    
     @IBOutlet weak var hamburgerBtn: UIButton!
     @IBOutlet weak var beverageBtn: UIButton!
     @IBOutlet weak var dessertBtn: UIButton!
@@ -16,11 +19,11 @@ class BeverageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         hamburgerBtn.layer.cornerRadius = 16
         hamburgerBtn.layer.borderWidth = 1
         hamburgerBtn.layer.borderColor = UIColor.systemGray.cgColor
-    
+        
         beverageBtn.layer.cornerRadius = 16
         beverageBtn.backgroundColor = .systemGray
         
@@ -61,7 +64,7 @@ class BeverageViewController: UIViewController {
         
         // Group
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5)), subitem: item, count: 2)
-
+        
         
         // Section
         let section = NSCollectionLayoutSection(group: group)
@@ -73,7 +76,7 @@ class BeverageViewController: UIViewController {
 }
 
 extension BeverageViewController: UICollectionViewDelegate {
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // 메뉴 옵션 모달 띄우기
@@ -85,28 +88,27 @@ extension BeverageViewController: UICollectionViewDelegate {
 }
 
 extension BeverageViewController: UICollectionViewDataSource {
-
+    
     //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let beverage = BeverageCollectionViewCell()
-        beverage.setup()
-        return beverage.beverageMenu.count
+        beverageData.setMenu()
+        return beverageData.beverageMenu.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BeverageCollectionViewCell.identifier, for: indexPath) as! BeverageCollectionViewCell
         
-        cell.setup()
+        beverageData.setMenu()
         
         //음료 메뉴 사진
-        cell.BeverageMenuImageView.image = UIImage(named: cell.beverageMenu[indexPath.row].photo)
-
+        cell.BeverageMenuImageView.image = UIImage(named: beverageData.beverageMenu[indexPath.row].photo)
+        
         //음료 메뉴 이름
-        cell.BeverageMenuNameLable.text = cell.beverageMenu[indexPath.row].name
-
+        cell.BeverageMenuNameLable.text = beverageData.beverageMenu[indexPath.row].name
+        
         //음료 메뉴 가격
-        cell.BeverageMenuPriceLable.text = "\(cell.beverageMenu[indexPath.row].price)원"
+        cell.BeverageMenuPriceLable.text = "\(beverageData.beverageMenu[indexPath.row].price)원"
         
         // 셀 색상
         cell.backgroundColor = .systemGray6

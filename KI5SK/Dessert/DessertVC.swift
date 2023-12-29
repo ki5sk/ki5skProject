@@ -9,6 +9,9 @@ import UIKit
 
 class DessertViewController: UIViewController {
 
+    //메뉴 데이터 인스턴스
+    var dessertData = MenuData()
+    
     @IBOutlet weak var hamburgerBtn: UIButton!
     @IBOutlet weak var beverageBtn: UIButton!
     @IBOutlet weak var dessertBtn: UIButton!
@@ -88,25 +91,24 @@ extension DessertViewController: UICollectionViewDataSource {
 
     //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let dessert = DessertCollectionViewCell()
-        dessert.setup()
-        return dessert.dessertMenu.count
+        dessertData.setMenu()
+        return dessertData.dessertMenu.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DessertCollectionViewCell.identifier, for: indexPath) as! DessertCollectionViewCell
         
-        cell.setup()
+        dessertData.setMenu()
         
         //디저트 메뉴 사진
-        cell.DessertMenuImageView.image = UIImage(named: cell.dessertMenu[indexPath.row].photo)
-
+        cell.DessertMenuImageView.image = UIImage(named: dessertData.dessertMenu[indexPath.row].photo)
+        
         //디저트 메뉴 이름
-        cell.DessertMenuNameLable.text = cell.dessertMenu[indexPath.row].name
-
+        cell.DessertMenuNameLable.text = dessertData.dessertMenu[indexPath.row].name
+        
         //디저트 메뉴 가격
-        cell.DessertMenuPriceLable.text = "\(cell.dessertMenu[indexPath.row].price)원"
+        cell.DessertMenuPriceLable.text = "\(dessertData.dessertMenu[indexPath.row].price)원"
         
         // 셀 색상
         cell.backgroundColor = .systemGray6

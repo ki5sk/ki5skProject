@@ -10,6 +10,9 @@ import UIKit
 class BurgerViewController: UIViewController {
     var carts:[Menu] = []
     
+    //메뉴 데이터 인스턴스
+    var bugerData = MenuData()
+    
     @IBOutlet weak var hamburgerBtn: UIButton!
     @IBOutlet weak var beverageBtn: UIButton!
     @IBOutlet weak var dessertBtn: UIButton!
@@ -35,7 +38,7 @@ class BurgerViewController: UIViewController {
     }
     
     @IBAction func beverageMenuBtn(_ sender: Any) {
-       
+        
         let storyboard = UIStoryboard(name: "Beverage", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BeverageViewController") as UIViewController
         
@@ -88,12 +91,11 @@ extension BurgerViewController: UICollectionViewDelegate {
 }
 
 extension BurgerViewController: UICollectionViewDataSource {
-
+    
     //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let buger = BurgerCollectionViewCell()
-        buger.setup()
-        return buger.bugerMenu.count
+        bugerData.setMenu()
+        return bugerData.bugerMenu.count
     }
     
     //cell 내부 구현부
@@ -101,16 +103,16 @@ extension BurgerViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BurgerCollectionViewCell.identifier, for: indexPath) as! BurgerCollectionViewCell
         
-        cell.setup()
+        bugerData.setMenu()
         
         //버거 메뉴 사진
-        cell.BugerMenuImageView.image = UIImage(named: cell.bugerMenu[indexPath.row].photo)
+        cell.BugerMenuImageView.image = UIImage(named: bugerData.bugerMenu[indexPath.row].photo)
         
         //버거 메뉴 이름
-        cell.BugerMenuNameLable.text = cell.bugerMenu[indexPath.row].name
-
+        cell.BugerMenuNameLable.text = bugerData.bugerMenu[indexPath.row].name
+        
         //버거 메뉴 가격
-        cell.BugerMenuPriceLable.text = "\(cell.bugerMenu[indexPath.row].price)원"
+        cell.BugerMenuPriceLable.text = "\(bugerData.bugerMenu[indexPath.row].price)원"
         
         // 셀 색상
         cell.backgroundColor = .systemGray6
