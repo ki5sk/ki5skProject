@@ -79,8 +79,9 @@ class DetailOptionViewController: UIViewController {
         var menuCount = Int(menuCountLbl.text!)!
         menuCount += 1
         menuCountLbl.text = String(menuCount)
+        
     }
-
+    
     }
     
 
