@@ -8,13 +8,15 @@
 import UIKit
 
 class DetailOptionViewController: UIViewController {
-
+    
+    var menu: [Menu] = []
+    
     // 이미지, 이름, 가격, 수량
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menuNameLbl: UILabel!
     @IBOutlet weak var menuPriceLbl: UILabel!
     @IBOutlet weak var menuCountLbl: UILabel!
-
+    
     
     // 후렌치 후라이  싱글옵션
     
@@ -56,7 +58,6 @@ class DetailOptionViewController: UIViewController {
         //메뉴 인스턴스 생성
         var selectedMenu = MenuData()
         selectedMenu.setMenu()
-        var menu: [Menu] = []
         
         //선택 카테고리 식별
         switch selectedCategory {
@@ -72,8 +73,8 @@ class DetailOptionViewController: UIViewController {
         
         //싱글 옵션
         topOptionLbl.text = menu[selectedIndexPath].singleOption?[0].title
-
-//        singleOption1Btn.backgroundImage(for: UIImage(systemName: "checkmark.circle.fill"))
+        
+        //        singleOption1Btn.backgroundImage(for: UIImage(systemName: "checkmark.circle.fill"))
         
         multiOption1Btn.layer.cornerRadius = 16
         multiOption2Btn.layer.cornerRadius = 16
@@ -101,8 +102,11 @@ class DetailOptionViewController: UIViewController {
         
     }
     
+    @IBAction func inputCartBtnTap(_ sender: UIButton) {
+        ModelManage.shared.cart.append(menu[selectedIndexPath])
     }
-    
+}
+
 
 
 
