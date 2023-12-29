@@ -78,6 +78,9 @@
                                                                             <buttonConfiguration key="configuration" style="plain" title="옵션변경">
                                                                                 <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="12"/>
                                                                             </buttonConfiguration>
+                                                                            <connections>
+                                                                                <action selector="changeOption:" destination="oWN-5a-aoB" eventType="touchUpInside" id="sFg-19-mR4"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imk-ay-IZF">
                                                                             <rect key="frame" x="0.0" y="40.333333333333336" width="98.666666666666671" height="20"/>
@@ -135,8 +138,10 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="imageTitle" destination="Wyk-Zs-baA" id="Tgw-id-QMX"/>
-                                                    <outlet property="mainTitle" destination="Jhh-zD-F3a" id="2Hy-N2-aN6"/>
+                                                    <outlet property="menuTitle" destination="Jhh-zD-F3a" id="2Hy-N2-aN6"/>
+                                                    <outlet property="numberTitle" destination="kdD-5S-v6A" id="QEx-yy-mMr"/>
                                                     <outlet property="optionsTitle" destination="YjM-qf-iJg" id="Tj2-a8-j9O"/>
+                                                    <outlet property="totalPrice" destination="udY-9O-Nhs" id="Ztc-qA-sCQ"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

@@ -1,5 +1,5 @@
 //
-//  CartCellViewController.swift
+//  FooterCell.swift
 //  KI5SK
 //
 //  Created by JiHoon K on 12/29/23.
@@ -7,12 +7,11 @@
 
 import UIKit
 
-class CartPaymentCell: UITableViewCell {
-    @IBOutlet weak var imageTitle: UIImageView!
+class FooterCell: UITableViewCell {
     @IBOutlet weak var menuTitle: UILabel!
     @IBOutlet weak var optionsTitle: UILabel!
     @IBOutlet var numberTitle: UILabel!
-    @IBOutlet var totalPrice: UILabel!
+    @IBOutlet var priceTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,13 +26,10 @@ class CartPaymentCell: UITableViewCell {
 
 }
 
-extension CartPaymentCell {
+extension FooterCell {
     @IBAction func subByOne(_ sender: UIButton) {
-        
     }
-    
     @IBAction func addByOne(_ sender: UIButton) {
-        
     }
     
     @IBAction func changeOption(_ sender: UIButton) {
