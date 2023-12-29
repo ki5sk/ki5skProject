@@ -2,7 +2,7 @@
 import UIKit
 
 class CartPaymentViewController: UIViewController {
-    var carts: [Menu] = Menu.testData()
+    var carts: [Menu] = []
     
     @IBOutlet weak var tableView: UITableView!
     
