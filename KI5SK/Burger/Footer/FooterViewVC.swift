@@ -39,9 +39,4 @@ extension FooterViewVC {
     @IBAction func orderButton(_ sender: UIButton) {
         
     }
-    
-    @IBAction func subByOne(_ sender: UIButton) {
-    }
-    @IBAction func addByOne(_ sender: UIButton) {
-    }
 }

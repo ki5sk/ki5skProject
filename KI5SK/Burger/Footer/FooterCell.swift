@@ -28,11 +28,9 @@ class FooterCell: UITableViewCell {
 
 extension FooterCell {
     @IBAction func subByOne(_ sender: UIButton) {
+        
     }
     @IBAction func addByOne(_ sender: UIButton) {
-    }
-    
-    @IBAction func changeOption(_ sender: UIButton) {
         
     }
 }
