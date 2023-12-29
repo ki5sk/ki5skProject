@@ -7,6 +7,16 @@
 
 import Foundation
 
+//menu -> detail 식별자
+var selectedIndexPath: Int = 0
+var selectedCategory :Category = .burger
+
+enum Category {
+    case burger
+    case beverage
+    case side
+}
+
 //MARK: 구조체
 //메뉴 구조체
 struct Menu {
@@ -17,10 +27,6 @@ struct Menu {
     var singleOption: [SingleOption]?
     var multiOption: [MultiOption]?
     var category: Category
-    
-    enum Category {
-        case burger, beverage, side
-    }
 }
 
 //싱글 옵션 구조체
