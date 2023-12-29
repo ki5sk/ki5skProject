@@ -8,6 +8,7 @@
 import UIKit
 
 class BurgerViewController: UIViewController {
+    var carts:[Menu] = []
     
     @IBOutlet weak var hamburgerBtn: UIButton!
     @IBOutlet weak var beverageBtn: UIButton!
@@ -118,3 +119,4 @@ extension BurgerViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
