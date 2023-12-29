@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+        <array key="Pretendard-SemiBold.otf">
+            <string>Pretendard-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Detail Option View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -27,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="48" id="ZgQ-2V-6Zc"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="* 내 카트에 담기">
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                     </button>
@@ -59,13 +67,13 @@
                                                                     <constraint firstAttribute="width" constant="24" id="gMR-rk-Bi0"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
-                                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
+                                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sT-Jc-ylp">
                                                                 <rect key="frame" x="30.000000000000004" y="0.0" width="41.333333333333343" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -93,7 +101,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-4S-brh">
                                                                 <rect key="frame" x="30.000000000000018" y="0.0" width="41.333333333333343" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -108,7 +116,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="du1-a8-26c"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -145,13 +153,13 @@
                                                                     <constraint firstAttribute="height" constant="24" id="f5b-ho-7co"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
-                                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
+                                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I37-uz-Nnz">
                                                                 <rect key="frame" x="30.000000000000004" y="0.0" width="41.333333333333343" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -179,7 +187,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4Y-GJ-s4g">
                                                                 <rect key="frame" x="30.000000000000018" y="0.0" width="41.333333333333343" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -202,13 +210,13 @@
                                                                     <constraint firstAttribute="width" constant="24" id="9FM-Lo-kyt"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
-                                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
+                                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iST-fO-bHO">
                                                                 <rect key="frame" x="30.000000000000004" y="0.0" width="41.333333333333343" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -236,7 +244,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-i4-oCE">
                                                                 <rect key="frame" x="30.000000000000018" y="0.0" width="41.333333333333343" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -251,7 +259,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="ypj-vz-7zI"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -283,7 +291,10 @@
                                                             <constraint firstAttribute="height" constant="32" id="dc7-2P-bdW"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-hX-ZwJ">
                                                         <rect key="frame" x="124" y="0.0" width="91" height="32"/>
@@ -292,7 +303,10 @@
                                                             <constraint firstAttribute="width" constant="91" id="h4r-d1-mT5"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -320,7 +334,10 @@
                                                             <constraint firstAttribute="width" constant="91" id="gLt-vl-CGk"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDe-zK-0hl">
                                                         <rect key="frame" x="214" y="0.0" width="91" height="32"/>
@@ -329,7 +346,10 @@
                                                             <constraint firstAttribute="height" constant="32" id="eaO-Ga-jKG"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -342,7 +362,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="m8A-oM-Q0Z"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -380,10 +400,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="32"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="minus.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="menuMinusBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ea1-MF-dhO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="586-tB-1ya">
                                         <rect key="frame" x="49.666666666666657" y="0.0" width="9" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -391,6 +414,9 @@
                                         <rect key="frame" x="58.666666666666657" y="0.0" width="49.666666666666657" height="32"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="menuPlusBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rgx-fr-CF6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
@@ -408,21 +434,21 @@
                                             <constraint firstAttribute="height" constant="110" id="UbU-Za-cWG"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcG-1m-jTg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcG-1m-jTg">
                                         <rect key="frame" x="0.0" y="110" width="110" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fDO-hs-oxH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg2-oj-Qlb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg2-oj-Qlb">
                                         <rect key="frame" x="0.0" y="140" width="110" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="OX9-1T-9RS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -448,6 +474,33 @@
                             <constraint firstItem="JpP-7e-uGQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="vw1-VF-gaj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomOptionLbl" destination="vkb-aP-zEf" id="5Eq-Ii-LnG"/>
+                        <outlet property="inputCartBtn" destination="Pdy-Zq-BaT" id="gwP-3W-ntl"/>
+                        <outlet property="menuCountLbl" destination="586-tB-1ya" id="VNO-NI-wJ0"/>
+                        <outlet property="menuImage" destination="i1q-wg-bCj" id="8YI-Ur-TxF"/>
+                        <outlet property="menuNameLbl" destination="CcG-1m-jTg" id="0MG-zO-eBf"/>
+                        <outlet property="menuPriceLbl" destination="Fg2-oj-Qlb" id="G1c-SN-AGr"/>
+                        <outlet property="middleOptionLbl" destination="QZI-xC-H5X" id="pn7-rh-tzN"/>
+                        <outlet property="multiOption1Btn" destination="7Cp-OJ-Ppd" id="xQE-Nf-Ei8"/>
+                        <outlet property="multiOption2Btn" destination="Lnh-8h-rAU" id="Wko-iJ-Rpk"/>
+                        <outlet property="multiOption3Btn" destination="iDe-zK-0hl" id="rZu-dx-nBd"/>
+                        <outlet property="multiOption4Btn" destination="qfs-dX-Zfl" id="j7z-ro-rIV"/>
+                        <outlet property="multiOption5Btn" destination="qH3-hX-ZwJ" id="vg9-La-5KL"/>
+                        <outlet property="singleOption1Btn" destination="6ug-Rl-zH0" id="ovz-j3-Aau"/>
+                        <outlet property="singleOption1Lbl" destination="3sT-Jc-ylp" id="fXg-g5-WYS"/>
+                        <outlet property="singleOption2Btn" destination="NmA-SY-4Av" id="d4s-gf-CgJ"/>
+                        <outlet property="singleOption2Lbl" destination="nzK-4S-brh" id="YXJ-j1-i4Z"/>
+                        <outlet property="singleOption3Btn" destination="Vaj-qK-IhS" id="6n5-2G-Our"/>
+                        <outlet property="singleOption3Lbl" destination="iST-fO-bHO" id="Bht-ma-076"/>
+                        <outlet property="singleOption4Btn" destination="TQK-sv-oQD" id="RwD-3m-4Ut"/>
+                        <outlet property="singleOption4Lbl" destination="0lD-i4-oCE" id="jN8-gt-FYd"/>
+                        <outlet property="singleOption5Btn" destination="cFZ-2e-RV0" id="O81-fT-8Em"/>
+                        <outlet property="singleOption5Lbl" destination="I37-uz-Nnz" id="MsF-52-bI6"/>
+                        <outlet property="singleOption6Btn" destination="fbZ-La-Lua" id="PyB-7x-XR6"/>
+                        <outlet property="singleOption6Lbl" destination="c4Y-GJ-s4g" id="oR3-Zn-TvS"/>
+                        <outlet property="topOptionLbl" destination="Zy0-Ds-T5b" id="Jdi-qe-ofW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -455,6 +508,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="minus.circle" catalog="system" width="128" height="123"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
@@ -463,6 +517,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
