@@ -73,6 +73,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
                                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="singleOption1BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pbG-Cl-jbp"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sT-Jc-ylp">
                                                                 <rect key="frame" x="30.000000000000004" y="0.0" width="41.333333333333343" height="24"/>
@@ -101,6 +104,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
                                                                     <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="singleOption2BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fWv-cx-Ntc"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-4S-brh">
                                                                 <rect key="frame" x="30.000000000000018" y="0.0" width="41.333333333333343" height="24"/>
@@ -159,6 +165,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
                                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="singleOption5BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JYQ-Aj-Ib3"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I37-uz-Nnz">
                                                                 <rect key="frame" x="30.000000000000004" y="0.0" width="41.333333333333343" height="24"/>
@@ -187,6 +196,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
                                                                     <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="singleOption6BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fmx-0I-qkc"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4Y-GJ-s4g">
                                                                 <rect key="frame" x="30.000000000000018" y="0.0" width="41.333333333333343" height="24"/>
@@ -216,6 +228,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system">
                                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="singleOption3BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7LQ-eW-68n"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iST-fO-bHO">
                                                                 <rect key="frame" x="30.000000000000004" y="0.0" width="41.333333333333343" height="24"/>
@@ -244,6 +259,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
                                                                     <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="singleOption4BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yiA-mp-oxA"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-i4-oCE">
                                                                 <rect key="frame" x="30.000000000000018" y="0.0" width="41.333333333333343" height="24"/>
@@ -293,11 +311,14 @@
                                                             <constraint firstAttribute="width" constant="108" id="LQk-S1-yuQ"/>
                                                             <constraint firstAttribute="height" constant="32" id="dc7-2P-bdW"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                                             <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="multiOption4BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Saf-fa-7ca"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-hX-ZwJ">
                                                         <rect key="frame" x="124" y="0.0" width="91" height="32"/>
@@ -305,11 +326,14 @@
                                                             <constraint firstAttribute="height" constant="32" id="2mR-Kk-rrp"/>
                                                             <constraint firstAttribute="width" constant="91" id="h4r-d1-mT5"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                                             <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="multiOption5BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sPc-Vj-uj8"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -327,8 +351,14 @@
                                                             <constraint firstAttribute="width" constant="91" id="mJ6-MP-3dj"/>
                                                             <constraint firstAttribute="height" constant="32" id="wIV-Js-jd3"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                            <color key="baseForegroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="multiOption1BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D0i-Nq-AZA"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnh-8h-rAU">
                                                         <rect key="frame" x="107" y="0.0" width="91" height="32"/>
@@ -336,11 +366,14 @@
                                                             <constraint firstAttribute="height" constant="32" id="B2y-V4-SA0"/>
                                                             <constraint firstAttribute="width" constant="91" id="gLt-vl-CGk"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                                             <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="multiOption2BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MSj-2Y-NJR"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDe-zK-0hl">
                                                         <rect key="frame" x="214" y="0.0" width="91" height="32"/>
@@ -348,11 +381,14 @@
                                                             <constraint firstAttribute="width" constant="91" id="IzW-GB-xIG"/>
                                                             <constraint firstAttribute="height" constant="32" id="eaO-Ga-jKG"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                                             <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="multiOption3BtnTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dx9-qr-bQL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
