@@ -75,6 +75,9 @@ extension BurgerViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        //indexPath 넘겨주기
+        //temp = indexPath
+        
         // 메뉴 옵션 모달 띄우기
         let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as UIViewController
@@ -101,12 +104,10 @@ extension BurgerViewController: UICollectionViewDataSource {
         
         //버거 메뉴 사진
         cell.BugerMenuImageView.image = UIImage(named: cell.bugerMenu[indexPath.row].photo)
-        cell.BugerMenuImageView.contentMode = .scaleAspectFit
         
         //버거 메뉴 이름
         cell.BugerMenuNameLable.text = cell.bugerMenu[indexPath.row].name
 
-        
         //버거 메뉴 가격
         cell.BugerMenuPriceLable.text = "\(cell.bugerMenu[indexPath.row].price)원"
         
