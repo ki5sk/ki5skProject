@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cart View Controller-->
+        <!--Cart Payment View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CartViewController" id="Y6W-OH-hqX" customClass="CartViewController" customModule="KI5SK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartViewController" id="Y6W-OH-hqX" customClass="CartPaymentViewController" customModule="KI5SK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="711"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" id="oWN-5a-aoB">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" id="oWN-5a-aoB" customClass="CartPaymentCell" customModule="KI5SK" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="361" height="60.333332061767578"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oWN-5a-aoB" id="ycf-Ml-g7Y">
@@ -101,6 +101,9 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="23.333333333333332" height="38.666666666666664"/>
                                                                                     <state key="normal" title="Button"/>
                                                                                     <buttonConfiguration key="configuration" style="plain" image="minus.square" catalog="system"/>
+                                                                                    <connections>
+                                                                                        <action selector="addByOne:" destination="oWN-5a-aoB" eventType="touchUpInside" id="Asg-6C-eDc"/>
+                                                                                    </connections>
                                                                                 </button>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdD-5S-v6A">
                                                                                     <rect key="frame" x="23.333333333333371" y="0.0" width="23" height="38.666666666666664"/>
@@ -112,6 +115,9 @@
                                                                                     <rect key="frame" x="46.333333333333371" y="0.0" width="23.333333333333329" height="38.666666666666664"/>
                                                                                     <state key="normal" title="Button"/>
                                                                                     <buttonConfiguration key="configuration" style="plain" image="plus.square" catalog="system"/>
+                                                                                    <connections>
+                                                                                        <action selector="subByOne:" destination="oWN-5a-aoB" eventType="touchUpInside" id="KPB-SR-P7r"/>
+                                                                                    </connections>
                                                                                 </button>
                                                                             </subviews>
                                                                         </stackView>
@@ -127,6 +133,11 @@
                                                         <constraint firstItem="oZg-PM-bVg" firstAttribute="top" secondItem="ycf-Ml-g7Y" secondAttribute="top" id="tt1-Ol-EI7"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="imageTitle" destination="Wyk-Zs-baA" id="Tgw-id-QMX"/>
+                                                    <outlet property="mainTitle" destination="Jhh-zD-F3a" id="2Hy-N2-aN6"/>
+                                                    <outlet property="optionsTitle" destination="YjM-qf-iJg" id="Tj2-a8-j9O"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -138,6 +149,9 @@
                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="74,500 • 결제하기"/>
+                                        <connections>
+                                            <action selector="payButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8lL-zi-cM6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -152,7 +166,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="YVu-96-bcz" id="wBI-Z7-zYV"/>
+                        <outlet property="tableView" destination="YVu-96-bcz" id="7aC-Mf-3eC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
