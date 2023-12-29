@@ -30,7 +30,6 @@ class BurgerViewController: UIViewController {
         
         burgerCollectionView.delegate = self
         burgerCollectionView.dataSource = self
-        burgerCollectionView.register(BurgerCollectionViewCell.self, forCellWithReuseIdentifier: BurgerCollectionViewCell.identifier)
         burgerCollectionView.collectionViewLayout = createLayout()
     }
     
@@ -88,9 +87,9 @@ extension BurgerViewController: UICollectionViewDataSource {
 
     //item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        BurgerCollectionViewCell().setup()
-        return BurgerCollectionViewCell().bugerMenu.count
+        let buger = BurgerCollectionViewCell()
+        buger.setup()
+        return buger.bugerMenu.count
     }
     
     //cell 내부 구현부
@@ -98,14 +97,18 @@ extension BurgerViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BurgerCollectionViewCell.identifier, for: indexPath) as! BurgerCollectionViewCell
         
+        cell.setup()
+        
         //버거 메뉴 사진
-//        cell.BugerMenuImageView.image = UIImage(named: cell.bugerMenu[indexPath.row].photo)
+        cell.BugerMenuImageView.image = UIImage(named: cell.bugerMenu[indexPath.row].photo)
+        cell.BugerMenuImageView.contentMode = .scaleAspectFit
         
         //버거 메뉴 이름
         cell.BugerMenuNameLable.text = cell.bugerMenu[indexPath.row].name
+
         
-//        //버거 메뉴 가격
-//        cell.BugerMenuPriceLable.text = "\(cell.bugerMenu[indexPath.row].price)"
+        //버거 메뉴 가격
+        cell.BugerMenuPriceLable.text = "\(cell.bugerMenu[indexPath.row].price)원"
         
         // 셀 색상
         cell.backgroundColor = .systemGray6
