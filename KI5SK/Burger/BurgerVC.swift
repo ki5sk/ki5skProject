@@ -35,7 +35,7 @@ class BurgerViewController: UIViewController {
         burgerCollectionView.dataSource = self
         burgerCollectionView.collectionViewLayout = createLayout()
     }
-    
+     
     @IBAction func beverageMenuBtn(_ sender: Any) {
        
         let storyboard = UIStoryboard(name: "Beverage", bundle: nil)
