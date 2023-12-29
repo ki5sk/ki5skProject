@@ -2,8 +2,6 @@
 import UIKit
 
 class CartPaymentViewController: UIViewController {
-    var carts: [Menu] = []
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -11,6 +9,7 @@ class CartPaymentViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+        
     }
     
     required init?(coder: NSCoder) {
@@ -20,7 +19,7 @@ class CartPaymentViewController: UIViewController {
 
 extension CartPaymentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carts.count
+        return ModelManage.shared.cart.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
