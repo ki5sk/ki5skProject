@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Regular.otf">
+            <string>Pretendard-Regular</string>
+        </array>
+        <array key="Pretendard-SemiBold.otf">
+            <string>Pretendard-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Cart Payment View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CartViewController" id="Y6W-OH-hqX" customClass="CartPaymentViewController" customModule="KI5SK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartPaymentViewController" id="Y6W-OH-hqX" customClass="CartPaymentViewController" customModule="KI5SK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +188,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="179" y="-145"/>
+        </scene>
+        <!--Complete Payment View Controller-->
+        <scene sceneID="O2b-7i-FFL">
+            <objects>
+                <viewController storyboardIdentifier="CompletePaymentViewController" id="8N5-dJ-437" customClass="CompletePaymentViewController" customModule="KI5SK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wTR-8x-9Oz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaB-n3-DM0">
+                                <rect key="frame" x="32.666666666666657" y="134.66666666666663" width="328" height="583"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3초 뒤 자동으로 닫힙니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZV-M1-0GO">
+                                        <rect key="frame" x="71.333333333333343" y="526" width="185.00000000000003" height="22"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문이 접수되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8S-vI-uxi">
+                                        <rect key="frame" x="26" y="355" width="276" height="36"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대기번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCS-c4-A33">
+                                        <rect key="frame" x="129" y="29" width="70" height="24"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J62-na-lSK" customClass="GIFImageView" customModule="Gifu">
+                                        <rect key="frame" x="59" y="130.00000000000003" width="210" height="209.99999999999997"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="9ya-Rh-SXA"/>
+                                            <constraint firstAttribute="height" constant="210" id="VPT-Ex-oLH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#0001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSg-pC-nLB">
+                                        <rect key="frame" x="74" y="53" width="180" height="72"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="L8S-vI-uxi" firstAttribute="top" secondItem="J62-na-lSK" secondAttribute="bottom" constant="15" id="4cF-nL-IPC"/>
+                                    <constraint firstAttribute="width" constant="328" id="7fx-gj-6k2"/>
+                                    <constraint firstItem="J62-na-lSK" firstAttribute="centerX" secondItem="zaB-n3-DM0" secondAttribute="centerX" id="Eii-Jb-UKG"/>
+                                    <constraint firstItem="L8S-vI-uxi" firstAttribute="centerX" secondItem="zaB-n3-DM0" secondAttribute="centerX" id="Eme-EI-FUu"/>
+                                    <constraint firstAttribute="bottom" secondItem="dZV-M1-0GO" secondAttribute="bottom" constant="35" id="Jab-D5-dJ9"/>
+                                    <constraint firstItem="dZV-M1-0GO" firstAttribute="centerX" secondItem="zaB-n3-DM0" secondAttribute="centerX" id="PH0-EO-gus"/>
+                                    <constraint firstItem="J62-na-lSK" firstAttribute="top" secondItem="oSg-pC-nLB" secondAttribute="bottom" constant="5" id="Q3B-bs-tZf"/>
+                                    <constraint firstItem="UCS-c4-A33" firstAttribute="centerX" secondItem="zaB-n3-DM0" secondAttribute="centerX" id="eRF-9c-H4z"/>
+                                    <constraint firstItem="oSg-pC-nLB" firstAttribute="centerX" secondItem="zaB-n3-DM0" secondAttribute="centerX" id="fdb-S4-7M1"/>
+                                    <constraint firstAttribute="height" constant="583" id="lAL-gJ-aKQ"/>
+                                    <constraint firstItem="dZV-M1-0GO" firstAttribute="top" secondItem="L8S-vI-uxi" secondAttribute="bottom" constant="135" id="sji-Fz-wak"/>
+                                    <constraint firstItem="oSg-pC-nLB" firstAttribute="top" secondItem="UCS-c4-A33" secondAttribute="bottom" id="ynx-gE-D7Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uPy-gA-cPA"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="zaB-n3-DM0" firstAttribute="centerX" secondItem="wTR-8x-9Oz" secondAttribute="centerX" id="kTi-ju-Y9n"/>
+                            <constraint firstItem="zaB-n3-DM0" firstAttribute="centerY" secondItem="wTR-8x-9Oz" secondAttribute="centerY" id="uCD-3t-kJS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="completePaymentGif" destination="J62-na-lSK" id="l9N-FV-hGE"/>
+                        <outlet property="timerDismissLbl" destination="dZV-M1-0GO" id="rjV-f5-wzu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeC-fC-yjr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154.9618320610687" y="-145.07042253521126"/>
         </scene>
     </scenes>
     <resources>
