@@ -9,12 +9,7 @@ class CartPaymentViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
-    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
 }
 
 extension CartPaymentViewController: UITableViewDataSource {
@@ -23,7 +18,8 @@ extension CartPaymentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = CartPaymentCell(style: .default, reuseIdentifier: "cartCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell") as? CartPaymentCell else { return CartPaymentCell() }
+        cell.menu = ModelManage.shared.cart[indexPath.row]
         
         return cell
     }
