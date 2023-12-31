@@ -9,6 +9,10 @@ import UIKit
 
 class EntryViewController: UIViewController {
     
+    @IBOutlet weak var burgerBtn: UIButton!
+    @IBOutlet weak var beverageBtn: UIButton!
+    @IBOutlet weak var dessertBtn: UIButton!
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var totalPrice: UILabel!
@@ -27,6 +31,10 @@ class EntryViewController: UIViewController {
         dessertVC = UIStoryboard(name: "Dessert", bundle: nil).instantiateViewController(withIdentifier: "DessertViewController") as? DessertViewController
         
         contentView.addSubview(burgerVC.view)
+        
+        initBtn()
+        burgerBtn.layer.backgroundColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
+        burgerBtn.tintColor = .white
     }
     
     @IBAction func orderBtn(_ sender: Any) {
@@ -55,6 +63,10 @@ extension EntryViewController: UITableViewDataSource {
 
 extension EntryViewController {
     @IBAction func tapTopButton(_ sender: UIButton) {
+        initBtn()
+        sender.layer.backgroundColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
+        sender.tintColor = .white
+        
         burgerVC.removeFromParent()
         beverageVC.removeFromParent()
         dessertVC.removeFromParent()
@@ -71,3 +83,27 @@ extension EntryViewController {
     }
 }
 
+extension EntryViewController {
+    private func initBtn() {
+        burgerBtn.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        burgerBtn.layer.borderColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
+        burgerBtn.layer.cornerRadius = 16
+        burgerBtn.layer.borderWidth = 1
+        burgerBtn.clipsToBounds = true
+        burgerBtn.tintColor = .black
+        
+        beverageBtn.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        beverageBtn.layer.borderColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
+        beverageBtn.layer.cornerRadius = 16
+        beverageBtn.layer.borderWidth = 1
+        beverageBtn.clipsToBounds = true
+        beverageBtn.tintColor = .black
+        
+        dessertBtn.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        dessertBtn.layer.borderColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
+        dessertBtn.layer.cornerRadius = 16
+        dessertBtn.layer.borderWidth = 1
+        dessertBtn.clipsToBounds = true
+        dessertBtn.tintColor = .black
+    }
+}

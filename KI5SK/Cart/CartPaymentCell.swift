@@ -18,17 +18,19 @@ class CartPaymentCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-//        menuTitle.text = menu?.name
         
+        if let menu = menu {
+            imageTitle.image = UIImage(named: menu.photo)
+            menuTitle.text = menu.name
+            numberTitle.text = "\(menu.number)"
+            totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.getPriceOf(menu: menu))
+        }
     }
-
 }
 
 extension CartPaymentCell {
