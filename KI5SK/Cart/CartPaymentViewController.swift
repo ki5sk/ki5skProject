@@ -12,9 +12,9 @@ class CartPaymentViewController: UIViewController {
         
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
 }
 
 extension CartPaymentViewController: UITableViewDataSource {
@@ -36,6 +36,9 @@ extension CartPaymentViewController: UITableViewDelegate {
 extension CartPaymentViewController {
     @IBAction func payButton(_ sender: UIButton) {
         
+        guard let vc =  self.storyboard?.instantiateViewController(withIdentifier: "CompletePaymentViewController") as? CompletePaymentViewController else { return }
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

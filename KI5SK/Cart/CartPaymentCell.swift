@@ -25,7 +25,7 @@ class CartPaymentCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        menuTitle.text = menu?.name
+//        menuTitle.text = menu?.name
         
     }
 

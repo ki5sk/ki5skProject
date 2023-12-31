@@ -28,6 +28,14 @@ class EntryViewController: UIViewController {
         
         contentView.addSubview(burgerVC.view)
     }
+    
+    @IBAction func orderBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Cart", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CartPaymentViewController") as UIViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
+    }
 }
 
 extension EntryViewController: UITableViewDataSource {
