@@ -12,24 +12,24 @@ class BeverageViewController: UIViewController {
     //메뉴 데이터 인스턴스
     var beverageData = MenuData()
     
-    @IBOutlet weak var hamburgerBtn: UIButton!
-    @IBOutlet weak var beverageBtn: UIButton!
-    @IBOutlet weak var dessertBtn: UIButton!
+//    @IBOutlet weak var hamburgerBtn: UIButton!
+//    @IBOutlet weak var beverageBtn: UIButton!
+//    @IBOutlet weak var dessertBtn: UIButton!
     @IBOutlet weak var beverageCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hamburgerBtn.layer.cornerRadius = 16
-        hamburgerBtn.layer.borderWidth = 1
-        hamburgerBtn.layer.borderColor = UIColor.systemGray.cgColor
-        
-        beverageBtn.layer.cornerRadius = 16
-        beverageBtn.backgroundColor = .systemGray
-        
-        dessertBtn.layer.cornerRadius = 16
-        dessertBtn.layer.borderWidth = 1
-        dessertBtn.layer.borderColor = UIColor.systemGray.cgColor
+//        hamburgerBtn.layer.cornerRadius = 16
+//        hamburgerBtn.layer.borderWidth = 1
+//        hamburgerBtn.layer.borderColor = UIColor.systemGray.cgColor
+//        
+//        beverageBtn.layer.cornerRadius = 16
+//        beverageBtn.backgroundColor = .systemGray
+//        
+//        dessertBtn.layer.cornerRadius = 16
+//        dessertBtn.layer.borderWidth = 1
+//        dessertBtn.layer.borderColor = UIColor.systemGray.cgColor
         
         beverageCollectionView.delegate = self
         beverageCollectionView.dataSource = self

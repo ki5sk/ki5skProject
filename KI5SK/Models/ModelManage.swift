@@ -10,7 +10,7 @@ import Foundation
 class ModelManage {
     static let shared = ModelManage()
     
-    var cart: [Menu] = []
+    var cart: [Menu] = [Menu(name: "TestName", photo: "", price: 18700, category: .burger)]
 }
 
 extension ModelManage {

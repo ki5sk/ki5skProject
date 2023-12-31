@@ -13,6 +13,8 @@ class FooterCell: UITableViewCell {
     @IBOutlet var numberTitle: UILabel!
     @IBOutlet var priceTitle: UILabel!
     
+    var data: Menu?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,6 +24,13 @@ class FooterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
+//        menuTitle.text
+        
+        menuTitle.text = data?.name
+        optionsTitle.text = "optionsTitleTest"
+        numberTitle.text = "\(data?.number ?? 1)"
+        priceTitle.text = ModelManage.shared.formatPrice(ModelManage.shared.getPriceOf(menu: data!))
     }
 
 }
