@@ -3,12 +3,15 @@ import UIKit
 
 class CartPaymentViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var payButton:UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
+        
+        payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
     }
 }
 
@@ -20,6 +23,24 @@ extension CartPaymentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell") as? CartPaymentCell else { return CartPaymentCell() }
         cell.menu = ModelManage.shared.cart[indexPath.row]
+        cell.tapAction = { buttonType in
+            switch buttonType {
+            case .add:
+                ModelManage.shared.cart[indexPath.row].number += 1
+                tableView.reloadRows(at: [indexPath], with: .none)
+                self.payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+            case .sub:
+                if ModelManage.shared.cart[indexPath.row].number > 1 {
+                    ModelManage.shared.cart[indexPath.row].number -= 1
+                    tableView.reloadRows(at: [indexPath], with: .none)
+                    self.payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+                }
+            case .tapOption:
+                let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as UIViewController
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
         
         return cell
     }

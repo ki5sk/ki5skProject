@@ -28,6 +28,7 @@ class CompletePaymentViewController: UIViewController {
             self.timerDismissLbl.text = "\(1)초 뒤 자동으로 닫힙니다."
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            ModelManage.shared.clearCart()
             self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         }
     }

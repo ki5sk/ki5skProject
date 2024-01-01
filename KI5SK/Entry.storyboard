@@ -140,7 +140,7 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후렌치 후라이, 치즈 스파게티  ㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fj-Cf-lre">
-                                                                                    <rect key="frame" x="110" y="0.0" width="102" height="55.333333333333336"/>
+                                                                                    <rect key="frame" x="110" y="0.0" width="92" height="55.333333333333336"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="CsB-lc-CcJ"/>
                                                                                     </constraints>
@@ -149,11 +149,11 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqD-5u-opF">
-                                                                                    <rect key="frame" x="222" y="0.0" width="0.0" height="55.333333333333336"/>
+                                                                                    <rect key="frame" x="212" y="0.0" width="0.0" height="55.333333333333336"/>
                                                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                                 </view>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B1Z-GV-ogm">
-                                                                                    <rect key="frame" x="232" y="0.0" width="60" height="55.333333333333336"/>
+                                                                                    <rect key="frame" x="222" y="0.0" width="60" height="55.333333333333336"/>
                                                                                     <subviews>
                                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tB-QY-FYo">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="55.333333333333336"/>
@@ -188,9 +188,9 @@
                                                                                     </constraints>
                                                                                 </stackView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14,900원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Y-5I-nxF">
-                                                                                    <rect key="frame" x="302" y="0.0" width="75" height="55.333333333333336"/>
+                                                                                    <rect key="frame" x="292" y="0.0" width="85" height="55.333333333333336"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" constant="75" id="bw1-4u-cIy"/>
+                                                                                        <constraint firstAttribute="width" constant="85" id="bw1-4u-cIy"/>
                                                                                     </constraints>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>

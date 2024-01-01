@@ -39,6 +39,11 @@ class EntryViewController: UIViewController {
         self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
+    }
+    
     @IBAction func orderBtn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Cart", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CartPaymentViewController") as UIViewController

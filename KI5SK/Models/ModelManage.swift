@@ -92,4 +92,8 @@ extension ModelManage {
         
         return result * menu.number
     }
+    
+    func clearCart() {
+        cart.removeAll()
+    }
 }
