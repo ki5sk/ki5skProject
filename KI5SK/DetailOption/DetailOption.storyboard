@@ -473,16 +473,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vmp-ve-B8M">
-                                <rect key="frame" x="141.66666666666666" y="203" width="110" height="170"/>
+                                <rect key="frame" x="126.66666666666669" y="203" width="140" height="170"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-wg-bCj">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="110" id="UbU-Za-cWG"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcG-1m-jTg">
-                                        <rect key="frame" x="0.0" y="110" width="110" height="30"/>
+                                        <rect key="frame" x="0.0" y="110" width="140" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fDO-hs-oxH"/>
                                         </constraints>
@@ -491,7 +491,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg2-oj-Qlb">
-                                        <rect key="frame" x="0.0" y="140" width="110" height="30"/>
+                                        <rect key="frame" x="0.0" y="140" width="140" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="OX9-1T-9RS"/>
                                         </constraints>
@@ -502,7 +502,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="x7p-3p-Nw7"/>
+                                    <constraint firstAttribute="width" constant="140" id="x7p-3p-Nw7"/>
                                 </constraints>
                             </stackView>
                         </subviews>
