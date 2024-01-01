@@ -35,6 +35,8 @@ class EntryViewController: UIViewController {
         initBtn()
         burgerBtn.layer.backgroundColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1).cgColor
         burgerBtn.tintColor = .white
+        
+        self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
     }
     
     @IBAction func orderBtn(_ sender: Any) {
@@ -56,6 +58,20 @@ extension EntryViewController: UITableViewDataSource {
         
         let data = ModelManage.shared.cart[indexPath.row]
         cell.data = data
+        
+        cell.tapAction = { operType in
+            
+            switch operType{
+            case .add:
+                ModelManage.shared.cart[indexPath.row].number += 1
+            case .sub:
+                if ModelManage.shared.cart[indexPath.row].number > 1 {
+                    ModelManage.shared.cart[indexPath.row].number -= 1
+                }
+            }
+            tableView.reloadRows(at: [indexPath], with: .none)
+            self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
+        }
         
         return cell
     }

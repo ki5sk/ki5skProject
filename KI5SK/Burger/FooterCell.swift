@@ -14,6 +14,7 @@ class FooterCell: UITableViewCell {
     @IBOutlet var priceTitle: UILabel!
     
     var data: Menu?
+    var tapAction: ((OperType) -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,10 +37,16 @@ class FooterCell: UITableViewCell {
 }
 
 extension FooterCell {
-    @IBAction func subByOne(_ sender: UIButton) {
-        
-    }
+    
     @IBAction func addByOne(_ sender: UIButton) {
-        
+        tapAction!(.add)
+    }
+    
+    @IBAction func subByOne(_ sender: UIButton) {
+        tapAction!(.sub)
+    }
+    
+    enum OperType {
+        case sub, add
     }
 }

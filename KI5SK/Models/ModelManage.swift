@@ -10,7 +10,18 @@ import Foundation
 class ModelManage {
     static let shared = ModelManage()
     
-    var cart: [Menu] = [Menu(name: "TestName", photo: "", price: 18700, category: .burger)]
+    var cart: [Menu] = [Menu(name: "TestName", photo: "", price: 18700, category: .burger),
+                        Menu(name: "TestName2", photo: "", price: 18700, category: .burger)] //
+    var totalPrice: Int {
+        get {
+            var sum = 0
+            for menu in cart {
+                sum += getPriceOf(menu: menu)
+            }
+            
+            return sum
+        }
+    }
 }
 
 extension ModelManage {

@@ -208,7 +208,7 @@
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7Tg-zy-fkM">
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Tg-zy-fkM">
                                                         <rect key="frame" x="0.0" y="200" width="393" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직원 호출" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nei-uT-r7a">
@@ -221,11 +221,11 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-Rq-Cn2">
-                                                                <rect key="frame" x="100" y="0.0" width="93" height="50"/>
+                                                                <rect key="frame" x="110" y="0.0" width="63" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27,300원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fho-lR-j5S">
-                                                                <rect key="frame" x="193" y="0.0" width="100" height="50"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27,300원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fho-lR-j5S">
+                                                                <rect key="frame" x="183" y="0.0" width="100" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="X7n-VJ-TTB"/>
                                                                 </constraints>
@@ -236,7 +236,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz2-yr-OFT">
                                                                 <rect key="frame" x="293" y="0.0" width="100" height="50"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="KsS-zj-TCf"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="KsS-zj-TCf"/>
                                                                 </constraints>
                                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                                                 <state key="normal" title="Button"/>
