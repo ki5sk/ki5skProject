@@ -8,51 +8,21 @@
 import UIKit
 
 class BurgerViewController: UIViewController {
+    weak var entryVC:EntryViewController!
+    
     var carts:[Menu] = []
     
     //메뉴 데이터 인스턴스
     var bugerData = MenuData()
     
-//    @IBOutlet weak var hamburgerBtn: UIButton!
-//    @IBOutlet weak var beverageBtn: UIButton!
-//    @IBOutlet weak var dessertBtn: UIButton!
     @IBOutlet weak var burgerCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        hamburgerBtn.layer.cornerRadius = 16
-//        hamburgerBtn.backgroundColor = .systemGray
-//        
-//        beverageBtn.layer.cornerRadius = 16
-//        beverageBtn.layer.borderWidth = 1
-//        beverageBtn.layer.borderColor = UIColor.systemGray.cgColor
-//        
-//        dessertBtn.layer.cornerRadius = 16
-//        dessertBtn.layer.borderWidth = 1
-//        dessertBtn.layer.borderColor = UIColor.systemGray.cgColor
-        
         burgerCollectionView.delegate = self
         burgerCollectionView.dataSource = self
         burgerCollectionView.collectionViewLayout = createLayout()
-    }
-    
-    @IBAction func beverageMenuBtn(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "Beverage", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "BeverageViewController") as UIViewController
-        
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: false, completion: nil)
-    }
-    
-    @IBAction func dessertMenuBtn(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "Dessert", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DessertViewController") as UIViewController
-        
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: false, completion: nil)
     }
     
     // 컬렉션뷰 셀 레이아웃
@@ -86,7 +56,8 @@ extension BurgerViewController: UICollectionViewDelegate {
         
         // 메뉴 옵션 모달 띄우기
         let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as UIViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailOptionViewController") as! DetailOptionViewController
+        vc.entryVC = entryVC
         
         present(vc, animated: true, completion: nil)
     }

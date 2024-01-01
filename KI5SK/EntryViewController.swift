@@ -30,6 +30,10 @@ class EntryViewController: UIViewController {
         beverageVC = UIStoryboard(name: "Beverage", bundle: nil).instantiateViewController(withIdentifier: "BeverageViewController") as? BeverageViewController
         dessertVC = UIStoryboard(name: "Dessert", bundle: nil).instantiateViewController(withIdentifier: "DessertViewController") as? DessertViewController
         
+        burgerVC.entryVC = self
+        beverageVC.entryVC = self
+        dessertVC.entryVC = self
+        
         contentView.addSubview(burgerVC.view)
         
         initBtn()

@@ -51,7 +51,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UjC-8j-7xG">
-                                                                    <rect key="frame" x="70" y="11.333333333333332" width="136" height="37.333333333333343"/>
+                                                                    <rect key="frame" x="70" y="11.333333333333332" width="186" height="37.333333333333343"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JMT Burger Set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhh-zD-F3a">
                                                                             <rect key="frame" x="0.0" y="0.0" width="122" height="20.333333333333332"/>
@@ -67,7 +67,7 @@
                                                                         </label>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="6hW-Td-YSj"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="940" constant="250" id="6hW-Td-YSj"/>
                                                                     </constraints>
                                                                 </stackView>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-aF-QUY">
@@ -88,10 +88,10 @@
                                                                     </connections>
                                                                 </button>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="rtc-8e-hBO">
-                                                                    <rect key="frame" x="296" y="3.3333333333333321" width="65" height="53.666666666666671"/>
+                                                                    <rect key="frame" x="266" y="3.3333333333333321" width="95" height="53.666666666666671"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14,900원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udY-9O-Nhs">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="65" height="19.333333333333332"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="95" height="19.333333333333332"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="uXY-9G-dTq"/>
                                                                             </constraints>
@@ -100,7 +100,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Opr-zo-JPx">
-                                                                            <rect key="frame" x="0.0" y="19.333333333333332" width="65" height="34.333333333333343"/>
+                                                                            <rect key="frame" x="30" y="19.333333333333332" width="65" height="34.333333333333343"/>
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqq-Py-v5B">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="21.666666666666668" height="34.333333333333336"/>
@@ -136,6 +136,11 @@
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
+                                                            <variation key="default">
+                                                                <mask key="subviews">
+                                                                    <exclude reference="q3L-aF-QUY"/>
+                                                                </mask>
+                                                            </variation>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
