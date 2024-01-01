@@ -27,13 +27,14 @@ extension CartPaymentViewController: UITableViewDataSource {
             switch buttonType {
             case .add:
                 ModelManage.shared.cart[indexPath.row].number += 1
-                tableView.reloadRows(at: [indexPath], with: .none)
                 self.payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+                tableView.reloadData()
             case .sub:
                 if ModelManage.shared.cart[indexPath.row].number > 1 {
                     ModelManage.shared.cart[indexPath.row].number -= 1
-                    tableView.reloadRows(at: [indexPath], with: .none)
                     self.payButton.titleLabel?.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice) + " • 결제하기"
+                    tableView.reloadData()
+                    
                 }
             case .tapOption:
                 let storyboard = UIStoryboard(name: "DetailOption", bundle: nil)
@@ -56,6 +57,10 @@ extension CartPaymentViewController {
         guard let vc =  self.storyboard?.instantiateViewController(withIdentifier: "CompletePaymentViewController") as? CompletePaymentViewController else { return }
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func backButton(_ sender:UIButton) {
+        self.dismiss(animated: true)
     }
 }
 

@@ -82,6 +82,8 @@ class DetailOptionViewController: UIViewController {
         
         //합계 텍스트 레이블에 반영
         inputCartBtn.setTitle("\(menu[selectedIndexPath].price)원 • 내 카트에 담기", for: .normal)
+        
+        menuPriceLbl.text = "\(menu[selectedIndexPath].price)원"
     }
     
     override func viewDidLoad() {
@@ -214,14 +216,18 @@ class DetailOptionViewController: UIViewController {
             return
         }
         menu[selectedIndexPath].number -= 1
+        
         menuCountLbl.text = String(menu[selectedIndexPath].number)
         calculateTotalPrice()
+//        menuPriceLbl.text = "\(menu[selectedIndexPath].price)원"
     }
     // 플러스 버튼
     @IBAction func menuPlusBtn(_ sender: Any) {
         menu[selectedIndexPath].number += 1
+        
         menuCountLbl.text = String(menu[selectedIndexPath].number)
         calculateTotalPrice()
+//        menuPriceLbl.text = "\(menu[selectedIndexPath].price)원"
     }
     
     //싱글 옵션1 버튼 메서드
@@ -337,6 +343,7 @@ class DetailOptionViewController: UIViewController {
         
     //Cart에 담기 메서드
     @IBAction func inputCartBtnTap(_ sender: UIButton) {
+        menu[selectedIndexPath].price = originalPrice
         ModelManage.shared.cart.append(menu[selectedIndexPath])
         if entryVC != nil {
             entryVC.viewWillAppear(true)

@@ -25,11 +25,10 @@ class CartPaymentCell: UITableViewCell {
         if let menu = menu {
             imageTitle.image = UIImage(named: menu.photo)
             menuTitle.text = menu.name
-            optionsTitle.text = ModelManage.shared.optionsTitle
+            optionsTitle.text = ModelManage.shared.getOptionsTitle(menu: menu)
             numberTitle.text = "\(menu.number)"
             totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.getPriceOf(menu: menu))
         }
-        
         
         setUpView()
     }
