@@ -11,6 +11,9 @@ import Foundation
 var selectedIndexPath: Int = 0
 var selectedCategory :Category = .burger
 
+//주문 개수
+
+
 enum Category {
     case burger
     case beverage
@@ -52,7 +55,7 @@ struct MenuData {
                 (name: "L", price: 500)],
         selected: 0
     )
-    var BeverageOption = SingleOption(
+    var beverageOption = SingleOption(
         title: "음료",
         items: [
             (name: "콜라 제로M", price: 0),
@@ -62,6 +65,23 @@ struct MenuData {
         ],
         selected: 0
     )
+    var sizeOption = SingleOption(
+        title: "크기",
+        items: [
+            (name: "M", price: 0),
+            (name: "L", price: 500)
+        ],
+        selected: 0)
+    
+    var flavorOption = SingleOption(
+        title: "맛",
+        items: [
+            (name: "바닐라", price: 0),
+            (name: "딸기", price: 0),
+            (name: "초코", price: 0),
+            (name: "바나나", price: 0)
+        ],
+        selected: 0)
     
     //멀티 옵션 인스턴스
     var extraMenuOption = MultiOption(
@@ -78,67 +98,73 @@ struct MenuData {
     //버거 메뉴 인스턴스 생성
     //옵션 인스턴스 생성 이후 이루어져야 함으로 lazy 키워드 사용
     lazy var bigmacSet = Menu(
-        name: "BIGMAC SET",
-        photo: "BIGMAC SET",
+        name: "BIGMAC Set",
+        photo: "BIGMAC Set",
         price: 10000,
-        singleOption: [frenchFrieOption, BeverageOption],
+        singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
         category: .burger
     )
     lazy var mediummacSet = Menu(
-        name: "MEDIUMMAC SET",
-        photo: "MEDIUMMAC SET",
+        name: "Chicken Set",
+        photo: "Chicken Set",
         price: 9000,
-        singleOption: [frenchFrieOption, BeverageOption],
+        singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
         category: .burger
     )
     lazy var smallmacSet = Menu(
-        name: "SMALLMAC SET",
-        photo: "SMALLMAC SET",
+        name: "Shrimp Set",
+        photo: "Shrimp Set",
         price: 8000,
-        singleOption: [frenchFrieOption, BeverageOption],
+        singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
         category: .burger
     )
     
     //음료 메뉴 인스턴스 생성
     lazy var coke = Menu(
-        name: "COKE",
-        photo: "COKE",
+        name: "Coke",
+        photo: "Coke",
         price: 2000,
+        singleOption: [sizeOption],
         category: .beverage
     )
     lazy var cider = Menu(
-        name: "CIDER",
-        photo: "CIDER",
+        name: "Cider",
+        photo: "Cider",
         price: 2000,
+        singleOption: [sizeOption],
         category: .beverage
     )
     lazy var shake = Menu(
-        name: "SHAKE",
-        photo: "SHAKE",
+        name: "Shake",
+        photo: "Shake",
         price: 3000,
+        singleOption: [sizeOption, flavorOption],
         category: .beverage
     )
     
     //디저트 메뉴 인스턴스 생성
     lazy var pie = Menu(
-        name: "PIE",
-        photo: "PIE",
+        name: "Pie",
+        photo: "Pie",
         price: 2000,
+        singleOption: [sizeOption],
         category: .side
     )
     lazy var cookie = Menu(
-        name: "COOKIE",
-        photo: "COOKIE",
+        name: "Cookie",
+        photo: "Cookie",
         price: 2500,
+        singleOption: [sizeOption],
         category: .side
     )
     lazy var icecream = Menu(
-        name: "ICECREAM",
-        photo: "ICECREAM",
+        name: "Icecreme",
+        photo: "Icecreme",
         price: 1500,
+        singleOption: [sizeOption, flavorOption],
         category: .side
     )
     
