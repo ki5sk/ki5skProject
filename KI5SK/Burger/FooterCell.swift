@@ -20,7 +20,7 @@ class FooterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         menuTitle.text = data?.name
-        optionsTitle.text = ModelManage.shared.optionsTitle
+        optionsTitle.text = ModelManage.shared.getOptionsTitle(menu: data!)
         numberTitle.text = "\(data?.number ?? 1)"
         priceTitle.text = ModelManage.shared.formatPrice(ModelManage.shared.getPriceOf(menu: data!))
     }

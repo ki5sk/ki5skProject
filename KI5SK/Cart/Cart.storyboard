@@ -29,8 +29,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jpq-Vi-kPN">
                                 <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="O1L-ne-heu">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn8-8f-HlH">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="biB-ba-PBv"/>
+                                                    <constraint firstAttribute="height" constant="55" id="uPg-P1-obT"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xZF-vg-DhP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="T65-Hs-Atw"/>
+                                        </constraints>
+                                    </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-96-bcz">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="711"/>
+                                        <rect key="frame" x="0.0" y="55" width="361" height="656"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cartCell" id="oWN-5a-aoB" customClass="CartPaymentCell" customModule="KI5SK" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="361" height="70.333335876464844"/>
@@ -167,7 +187,7 @@
                                             <constraint firstAttribute="height" constant="48" id="TpZ-wT-DY0"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="74,500 • 결제하기">
+                                        <buttonConfiguration key="configuration" style="filled" title="74,500원 • 결제하기">
                                             <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -186,6 +206,7 @@
                             <constraint firstItem="jpq-Vi-kPN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cpV-jY-wTa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oI2-58-D3Q"/>
                     <connections>
                         <outlet property="payButton" destination="RT5-gy-RXl" id="b9r-7m-pWa"/>
                         <outlet property="tableView" destination="YVu-96-bcz" id="7aC-Mf-3eC"/>
@@ -193,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179" y="-145"/>
+            <point key="canvasLocation" x="1104.5801526717557" y="-145.07042253521126"/>
         </scene>
         <!--Complete Payment View Controller-->
         <scene sceneID="O2b-7i-FFL">
@@ -269,10 +290,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FeC-fC-yjr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154.9618320610687" y="-145.07042253521126"/>
+            <point key="canvasLocation" x="2081.679389312977" y="-145.07042253521126"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="cup.and.saucer.fill" catalog="system" width="128" height="91"/>
         <image name="minus.square" catalog="system" width="128" height="114"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
