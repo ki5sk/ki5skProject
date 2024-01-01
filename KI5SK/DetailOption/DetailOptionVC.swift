@@ -342,6 +342,7 @@ class DetailOptionViewController: UIViewController {
     //Cart에 담기 메서드
     @IBAction func inputCartBtnTap(_ sender: UIButton) {
         ModelManage.shared.cart.append(menu[selectedIndexPath])
+        self.dismiss(animated: true)
     }
 }
 
