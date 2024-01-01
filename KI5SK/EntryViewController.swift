@@ -74,7 +74,7 @@ extension EntryViewController: UITableViewDataSource {
                     ModelManage.shared.cart[indexPath.row].number -= 1
                 }
             }
-            tableView.reloadRows(at: [indexPath], with: .none)
+            tableView.reloadData()
             self.totalPrice.text = ModelManage.shared.formatPrice(ModelManage.shared.totalPrice)
         }
         
