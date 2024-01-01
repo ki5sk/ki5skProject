@@ -10,8 +10,10 @@ import Foundation
 class ModelManage {
     static let shared = ModelManage()
     
-    var cart: [Menu] = [Menu(name: "TestName", photo: "", price: 18700, category: .burger),
-                        Menu(name: "TestName2", photo: "", price: 18700, category: .burger)] //
+    var cart: [Menu] = [Menu(name: "TestName", photo: "", price: 18700,
+                             singleOption: [.init(title: "SingleOption", items: [("A", 5000), ("B", 2500)], selected: 0)],
+                             multiOption: [.init(title: "MultiOption", items: [("A", 5000, true)])],
+                             category: .burger)] //
     var totalPrice: Int {
         get {
             var sum = 0
@@ -20,6 +22,34 @@ class ModelManage {
             }
             
             return sum
+        }
+    }
+    
+    var optionsTitle: String {
+        get {
+            var title = ""
+            for menu in cart {
+                if let singleOption = menu.singleOption {
+                    for single in singleOption {
+                        title += single.items[single.selected].name + ", "
+                    }
+                }
+                
+                if let multiOption = menu.multiOption {
+                    for multi in multiOption {
+                        for item in multi.items {
+                            if item.isSelected {
+                                title += item.name + ", "
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if title.last == " " { title.removeLast() }
+            if title.last == "," { title.removeLast() }
+            
+            return title
         }
     }
 }
