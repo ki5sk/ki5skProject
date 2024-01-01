@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailOptionViewController: UIViewController {
+    weak var entryVC: EntryViewController!
     
     //메뉴 배열 생성
     var menu: [Menu] = []
@@ -333,21 +334,17 @@ class DetailOptionViewController: UIViewController {
         menu[selectedIndexPath].multiOption?[0].items[4].isSelected = sender.isSelected
         calculateTotalPrice()
     }
-    
-    
-    
-    
-    
         
     //Cart에 담기 메서드
     @IBAction func inputCartBtnTap(_ sender: UIButton) {
         ModelManage.shared.cart.append(menu[selectedIndexPath])
+        if entryVC != nil {
+            entryVC.viewWillAppear(true)
+        }
+        
         self.dismiss(animated: true)
     }
 }
-
-
-
 
 // 버거 , 음료, 디저트
 //1. 버거 세트 (후렌치 후라이: M/L , 음료, 추가메뉴)
