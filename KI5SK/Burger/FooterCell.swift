@@ -14,32 +14,29 @@ class FooterCell: UITableViewCell {
     @IBOutlet var priceTitle: UILabel!
     
     var data: Menu?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    var tapAction: ((OperType) -> ())?
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-        
-//        menuTitle.text
         
         menuTitle.text = data?.name
-        optionsTitle.text = "optionsTitleTest"
+        optionsTitle.text = ModelManage.shared.optionsTitle
         numberTitle.text = "\(data?.number ?? 1)"
         priceTitle.text = ModelManage.shared.formatPrice(ModelManage.shared.getPriceOf(menu: data!))
     }
-
 }
 
 extension FooterCell {
-    @IBAction func subByOne(_ sender: UIButton) {
-        
-    }
+    
     @IBAction func addByOne(_ sender: UIButton) {
-        
+        tapAction!(.add)
+    }
+    
+    @IBAction func subByOne(_ sender: UIButton) {
+        tapAction!(.sub)
+    }
+    
+    enum OperType {
+        case sub, add
     }
 }
