@@ -105,7 +105,7 @@ struct MenuData {
         multiOption: [extraMenuOption],
         category: .burger
     )
-    lazy var mediummacSet = Menu(
+    lazy var chickenSet = Menu(
         name: "Chicken Set",
         photo: "Chicken Set",
         price: 9000,
@@ -113,10 +113,19 @@ struct MenuData {
         multiOption: [extraMenuOption],
         category: .burger
     )
-    lazy var smallmacSet = Menu(
+    lazy var shrimpSet = Menu(
         name: "Shrimp Set",
         photo: "Shrimp Set",
         price: 8000,
+        singleOption: [frenchFrieOption, beverageOption],
+        multiOption: [extraMenuOption],
+        category: .burger
+    )
+    
+    lazy var cheeseSet = Menu(
+        name: "Cheese Set",
+        photo: "Cheese Set",
+        price: 7000,
         singleOption: [frenchFrieOption, beverageOption],
         multiOption: [extraMenuOption],
         category: .burger
@@ -175,7 +184,7 @@ struct MenuData {
     
     //MARK: 카테고리별 메뉴 인스턴스 배열에 추가
     mutating func setMenu() {
-        bugerMenu = [bigmacSet, mediummacSet, smallmacSet]
+        bugerMenu = [bigmacSet, chickenSet, shrimpSet, cheeseSet]
         beverageMenu = [coke, cider, shake]
         dessertMenu = [pie, cookie, icecream]
     }
